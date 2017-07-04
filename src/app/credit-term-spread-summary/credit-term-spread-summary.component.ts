@@ -10,9 +10,9 @@ export class CreditTermSpreadSummaryComponent implements OnInit {
 	single: any[];
 	multi: any[];
 
-	view: any[] = [500, 200];
+	view: any[] = [300, 200];
 
-	 // options
+	// options
 	showXAxis = true;
 	showYAxis = true;
 	gradient = false;
@@ -21,10 +21,11 @@ export class CreditTermSpreadSummaryComponent implements OnInit {
 	xAxisLabel = 'Country';
 	showYAxisLabel = true;
 	yAxisLabel = 'Population';
+	barPadding = 15;
 	
 	colorScheme = {
 		domain: [
-			'#A133D5', '#DD3F5C', '#1ABB9C'
+			'#8B3252', '#6688BF', '#AAE3F5'
 		]
 	};
 
