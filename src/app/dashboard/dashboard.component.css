@@ -38,6 +38,9 @@ md-sidenav-container {
 	height: 900px;
     bottom: 0px;
 }
+md-nav-list {
+    width: 100%;
+}
 .nav_title {
     text-align: center;
     height: 50px;

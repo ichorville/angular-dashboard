@@ -38,6 +38,23 @@
 		<md-icon class="menu" (click)="sidenav.toggle()">menu</md-icon>
 	</md-toolbar>
 	<div class="pusher">
-		<app-credit-term-spread-summary></app-credit-term-spread-summary>
+		<div class="row">
+			<div class="col-md-4">
+				<md-card>
+					<h3>Credit Term Spread Summary</h3>
+					<app-credit-term-spread-summary></app-credit-term-spread-summary>
+				</md-card>
+			</div>
+			<div class="col-md-4">
+				<md-card>
+					<app-credit-term-spread-summary></app-credit-term-spread-summary>
+				</md-card>
+			</div>
+			<div class="col-md-4">
+				<md-card>
+					<app-credit-term-spread-summary></app-credit-term-spread-summary>
+				</md-card>
+			</div>
+		</div>
 	</div>
 </md-sidenav-container>
