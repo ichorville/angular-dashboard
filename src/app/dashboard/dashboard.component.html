@@ -1,0 +1,43 @@
+<md-sidenav-container>
+	<md-sidenav #sidenav mode="overlay" opened="true">
+		<md-nav-list>
+			<div class="nav_title">
+				<span class="site_title">Vantage</span>
+			</div>
+			<div class="profile">
+				<div class="profile_pic">
+					<img src="../assets/profile.jpg" alt="..." class="profile_img">
+				</div>
+				<div class="profile_info">
+					<span>Welcome,</span>
+					<h2>John Doe</h2>
+				</div>
+			</div>
+			<h3 md-subheader>Main</h3>
+			<md-divider></md-divider>
+			<md-list-item class="active" disableRipple>
+				<h4 md-line>TV</h4>
+			</md-list-item>
+			<md-list-item disableRipple>
+				<h4 md-line>Sales dashboard</h4>
+			</md-list-item>
+
+			<h3 md-subheader>Inventory</h3>
+			<md-divider></md-divider>
+			<md-list-item disableRipple>
+				<h4 md-line>Category</h4>
+			</md-list-item>
+			<h3 md-subheader>Sales</h3>
+			<md-divider></md-divider>
+			<md-list-item disableRipple>
+				<h4 md-line>Outlet Sales</h4>
+			</md-list-item>
+		</md-nav-list>
+	</md-sidenav>
+	<md-toolbar color="primary">
+		<md-icon class="menu" (click)="sidenav.toggle()">menu</md-icon>
+	</md-toolbar>
+	<div class="pusher">
+		<app-credit-term-spread-summary></app-credit-term-spread-summary>
+	</div>
+</md-sidenav-container>

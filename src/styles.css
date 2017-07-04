@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+body {
+    margin: 0px;
+    color: #73879C;
+    background: #2A3F54;
+    font-family: "Helvetica Neue",Roboto,Arial,"Droid Sans",sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.471;
+}
+.ngx-charts-outer {
+    width: 100% !important;
+    overflow-x: scroll;
+}
+.ngx-charts {
+    display: flex !important;
+}
+.chart-legend {
+    display: flex !important;
+}
