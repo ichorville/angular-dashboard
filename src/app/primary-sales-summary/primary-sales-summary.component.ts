@@ -1,0 +1,92 @@
+import { Component, OnInit } from '@angular/core';
+
+import { PrimarySalesSummaryService } from './primary-sales-summary.service';
+
+@Component({
+	selector: 'app-primary-sales-summary',
+	templateUrl: './primary-sales-summary.component.html',
+	styleUrls: ['./primary-sales-summary.component.css']
+})
+export class PrimarySalesSummaryComponent implements OnInit {
+
+	single1: any[];
+	single2: any[];
+	single3: any[];
+	multi: any[];
+
+	view: any[] = [150, 150];
+
+	bandColor = 'red';
+
+	colorScheme = {
+		domain: ['#5AA454', '#A10A28', '#C7B42C']
+	};
+
+	constructor(
+		private _pss: PrimarySalesSummaryService
+	) {
+		this.single1 = [];
+		this.single2 = [];
+		this.single3 = [];
+	}
+
+	onSelect(event) {
+		console.log(event);
+	}
+
+	ngOnInit() {
+		this._pss.get().then((response) => {
+			if (response.status == 500) {
+				return '404';
+			}
+			let tempYTD: any[] = [];
+			let tempMTD: any[] = [];
+			let tempTD: any[] = [];
+
+			response['results'].forEach(element => {
+				if (element['YearToDatePrimarySales'] == null) {
+					let ytdObject = {
+						'name': 'Year To Date',
+						'value': 0
+					};
+					tempYTD.push(ytdObject);
+				} else {
+					let ytdObject = {
+						'name': 'Year To Date',
+						'value': element['YearToDatePrimarySales']
+					};
+					tempYTD.push(ytdObject);
+				}
+				if (element['MonthToDatePrimarySales'] == null) {
+					let mtdObject = {
+						'name': 'Month To Date',
+						'value': 0
+					};
+					tempMTD.push(mtdObject);
+				} else {
+					let mtdObject = {
+						'name': 'Month To Date',
+						'value': element['MonthToDatePrimarySales']
+					};
+					tempMTD.push(mtdObject);
+				}
+				if (element['TodayPrimarySales'] == null) {
+					let todaydObject = {
+						'name': 'To Date',
+						'value': 0
+					};
+					tempTD.push(todaydObject);
+				} else {
+					let todaydObject = {
+						'name': 'To Date',
+						'value': element['TodayPrimarySales']
+					};
+					tempTD.push(todaydObject);
+				}	
+			});
+			this.single1 = tempYTD;
+			this.single2 = tempMTD;
+			this.single3 = tempTD;
+		});
+	}
+}
