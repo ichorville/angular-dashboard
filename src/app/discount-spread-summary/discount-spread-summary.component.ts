@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {DiscountSpreadSummaryService} from './discount-spread-summary.service';
 @Component({
   selector: 'app-discount-spread-summary',
   templateUrl: './discount-spread-summary.component.html',
@@ -32,12 +32,16 @@ single: any[];
 		console.log(event);
 	}
 
-	constructor() {
+	constructor(
+		private _dsss: DiscountSpreadSummaryService
+	) {
 		Object.assign(this, { single });
 	}
 
 	ngOnInit() {
-
+		this._dsss.get().then((response) => {
+			console.log(response);
+		});
 	}
 }
 

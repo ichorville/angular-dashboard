@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-	selector: 'app-sales-value-spread',
-	templateUrl: './sales-value-spread.component.html',
-	styleUrls: ['./sales-value-spread.component.css']
+  selector: 'app-sales-value-spread',
+  templateUrl: './sales-value-spread.component.html',
+  styleUrls: ['./sales-value-spread.component.css']
 })
 export class SalesValueSpreadComponent implements OnInit {
-	single: any[];
+single: any[];
 	multi: any[];
 
-	view: any[] = [300, 200];
+	view: any[] = [200, 200];
 
-	// options
+	 // options
 	showXAxis = true;
 	showYAxis = true;
 	gradient = false;
@@ -19,8 +19,8 @@ export class SalesValueSpreadComponent implements OnInit {
 	showXAxisLabel = true;
 	xAxisLabel = '';
 	showYAxisLabel = true;
-	yAxisLabel = 'Invoice Count';
-
+	yAxisLabel = 'invoice count';
+	
 	colorScheme = {
 		domain: [
 			'#A133D5', '#DD3F5C', '#1ABB9C'
@@ -97,6 +97,5 @@ export var multi = [
 			}
 		]
 	}
-];
-
+];	
 

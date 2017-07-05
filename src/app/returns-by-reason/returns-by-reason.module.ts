@@ -8,7 +8,7 @@ import { MaterialModule } from '@angular/material';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 import { ReturnsByReasonComponent } from './returns-by-reason.component';
-
+import {ReturnsByReasonService} from './returns-by-reason.service';
 @NgModule({
   imports: [
     BrowserModule,
@@ -22,6 +22,10 @@ import { ReturnsByReasonComponent } from './returns-by-reason.component';
   declarations: [
 	  ReturnsByReasonComponent
 	],
-  exports: [ReturnsByReasonComponent]
+  exports: [
+		ReturnsByReasonComponent],
+	providers: [
+		ReturnsByReasonService
+	]
 })
 export class ReturnsByReasonModule { }

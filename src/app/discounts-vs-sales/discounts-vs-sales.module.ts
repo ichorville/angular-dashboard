@@ -8,7 +8,7 @@ import { MaterialModule } from '@angular/material';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 import { DiscountsVsSalesComponent } from './discounts-vs-sales.component';
-
+import {DiscountVsSalesService} from './discounts-vs-sales.service';
 @NgModule({
 	imports: [
 		BrowserModule,
@@ -24,6 +24,9 @@ import { DiscountsVsSalesComponent } from './discounts-vs-sales.component';
 	],
 	exports: [
 		DiscountsVsSalesComponent
-	]
+	],
+	providers: [
+		DiscountVsSalesService
+		]
 })
 export class DiscountsVsSalesModule { }

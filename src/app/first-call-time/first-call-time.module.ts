@@ -8,6 +8,7 @@ import { MaterialModule } from '@angular/material';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 import { FirstCallTimeComponent } from './first-call-time.component';
+import {FirstCallTimeService} from './first-call-time.service';
 
 @NgModule({
 	imports: [
@@ -24,6 +25,9 @@ import { FirstCallTimeComponent } from './first-call-time.component';
 	],
 	exports: [
 		FirstCallTimeComponent
+	],
+	providers: [
+		FirstCallTimeService
 	]
 })
 export class FirstCallTimeModule { }
