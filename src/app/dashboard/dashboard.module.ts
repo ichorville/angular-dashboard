@@ -7,15 +7,16 @@ import { MaterialModule } from '@angular/material';
 import { HttpModule } from '@angular/http';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 
-import { DashboardComponent } from './dashboard.component';
 import { CreditTermSpreadSummaryModule } from '../credit-term-spread-summary/credit-term-spread-summary.module';
-import { DiscountSpreadSummaryModule} from '../discount-spread-summary/discount-spread-summary.module';
-import { SalesSkuSpreadSummaryModule} from '../sales-sku-spread-summary/sales-sku-spread-summary.module';
-import { SalesValueSpreadModule} from '../sales-value-spread/sales-value-spread.module';
-import {WorkForceTodayModule} from '../work-force-today/work-force-today.module';
-import {DiscountsVsSalesModule} from '../discounts-vs-sales/discounts-vs-sales.module';
-import {FirstCallTimeModule} from '../first-call-time/first-call-time.module';
-import {ReturnsByReasonModule} from '../returns-by-reason/returns-by-reason.module';
+import { DiscountSpreadSummaryModule } from '../discount-spread-summary/discount-spread-summary.module';
+import { SalesSkuSpreadSummaryModule } from '../sales-sku-spread-summary/sales-sku-spread-summary.module';
+import { SalesValueSpreadModule } from '../sales-value-spread/sales-value-spread.module';
+import { WorkForceTodayModule } from '../work-force-today/work-force-today.module';
+import { DiscountsVsSalesModule } from '../discounts-vs-sales/discounts-vs-sales.module';
+import { FirstCallTimeModule } from '../first-call-time/first-call-time.module';
+import { ReturnsByReasonModule } from '../returns-by-reason/returns-by-reason.module';
+
+import { DashboardComponent } from './dashboard.component';
 import { routing } from './dashboard.routing';
 
 @NgModule({

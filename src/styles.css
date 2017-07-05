@@ -15,16 +15,6 @@ body{
     text-rendering: optimizeLegibility;
     margin:20px
 }
-/*.ngx-charts-outer {
-    width: 100% !important;
-    overflow-x: scroll;
-}
-.ngx-charts {
-    display: flex !important;
-}
-.chart-legend {
-    display: flex !important;
-}*/
 .ngx-charts {
     float: none !important; 
     overflow: visible;
@@ -33,4 +23,7 @@ body{
 h3 {
     font-weight: 400 !important;
     text-align: center;
+}
+md-card {
+    margin-bottom: 15px;
 }

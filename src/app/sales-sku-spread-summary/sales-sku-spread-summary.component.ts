@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sales-sku-spread-summary.component.css']
 })
 export class SalesSkuSpreadSummaryComponent implements OnInit {
-single: any[];
+	single: any[];
 	multi: any[];
 
-	view: any[] = [200, 200];
+	view: any[] = [300, 200];
 
 	 // options
 	showXAxis = true;
@@ -19,7 +19,8 @@ single: any[];
 	showXAxisLabel = true;
 	xAxisLabel = '';
 	showYAxisLabel = true;
-	yAxisLabel = 'invoice count';
+	yAxisLabel = 'Invoice count';
+	barPadding = 15;
 	
 	colorScheme = {
 		domain: [
@@ -42,15 +43,15 @@ single: any[];
 
 export var single = [
 	{
-		"name": "1",
+		"name": "Outlet 1",
 		"value": 8940000
 	},
 	{
-		"name": "2",
+		"name": "Outlet 2",
 		"value": 5000000
 	},
 	{
-		"name": "3",
+		"name": "Outlet 3",
 		"value": 7200000
 	}
 ];

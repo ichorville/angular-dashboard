@@ -9,7 +9,7 @@ export class DiscountSpreadSummaryComponent implements OnInit {
 single: any[];
 	multi: any[];
 
-	view: any[] = [200, 200];
+	view: any[] = [300, 200];
 
 	 // options
 	showXAxis = true;
@@ -19,7 +19,8 @@ single: any[];
 	showXAxisLabel = true;
 	xAxisLabel = '';
 	showYAxisLabel = true;
-	yAxisLabel = 'invoice count';
+	yAxisLabel = 'Invoice Count';
+	barPadding = 15;
 	
 	colorScheme = {
 		domain: [

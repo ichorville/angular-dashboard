@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-work-force-today',
-  templateUrl: './work-force-today.component.html',
-  styleUrls: ['./work-force-today.component.css']
+	selector: 'app-work-force-today',
+	templateUrl: './work-force-today.component.html',
+	styleUrls: ['./work-force-today.component.css']
 })
 export class WorkForceTodayComponent implements OnInit {
 
- single: any[];
+	single: any[];
 	multi: any[];
 
-	view: any[] = [200, 200];
+	view: any[] = [300, 200];
 
-	 // options
+	// options
 	showXAxis = true;
 	showYAxis = true;
 	gradient = false;
@@ -20,8 +20,8 @@ export class WorkForceTodayComponent implements OnInit {
 	showXAxisLabel = true;
 	xAxisLabel = '';
 	showYAxisLabel = true;
-	yAxisLabel = 'invoice count';
-	
+	yAxisLabel = 'Invoice Count';
+
 	colorScheme = {
 		domain: [
 			'#A133D5', '#DD3F5C', '#1ABB9C'
