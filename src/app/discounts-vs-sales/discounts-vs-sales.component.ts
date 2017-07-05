@@ -32,76 +32,35 @@ export class DiscountsVsSalesComponent implements OnInit {
 	constructor(
 		private _dvs: DiscountVsSalesService
 	) {
-		Object.assign(this, { single, multi })
+		this.multi = [];
 	}
 
 	onSelect(event) {
 		console.log(event);
 	}
 	ngOnInit() {
-		// this._dvs.get().then((response) => {
-		// 	console.log(response);
-		// });
+		this._dvs.get().then((response) => {
+			if (!response) {
+				return '404';
+			}
+			let temp: any[] = [];
+			response['results'].forEach(element => {
+				let object = {
+					'name': element['Type'],
+					'series': [
+						{
+							'name': 'Discount Value',
+							'value': element['DiscountValue']
+						},
+						{
+							'name': 'Sales Value',
+							'value': element['SalesValue']
+						}
+					]
+				};
+				temp.push(object);
+			});
+			this.multi = temp;
+		});
 	}
 }
-
-export var single = [
-	{
-		"name": "Cash Sales",
-		"value": 8940000
-	},
-	{
-		"name": "Credit Sales",
-		"value": 5000000
-	},
-	{
-		"name": "Total Sales",
-		"value": 7200000
-	}
-];
-
-export var multi = [
-	{
-		"name": "Germany",
-		"series": [
-			{
-				"name": "2010",
-				"value": 7300000
-			},
-			{
-				"name": "2011",
-				"value": 8940000
-			}
-		]
-	},
-
-	{
-		"name": "USA",
-		"series": [
-			{
-				"name": "2010",
-				"value": 7870000
-			},
-			{
-				"name": "2011",
-				"value": 8270000
-			}
-		]
-	},
-
-	{
-		"name": "France",
-		"series": [
-			{
-				"name": "2010",
-				"value": 5000002
-			},
-			{
-				"name": "2011",
-				"value": 5800000
-			}
-		]
-	}
-];
-
-
