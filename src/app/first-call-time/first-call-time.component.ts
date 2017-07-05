@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {FirstCallTimeService} from './first-call-time.service';
+
+import { FirstCallTimeService } from './first-call-time.service';
 
 @Component({
 	selector: 'app-first-call-time',

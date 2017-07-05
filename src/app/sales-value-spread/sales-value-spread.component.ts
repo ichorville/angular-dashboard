@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { SalesValueSpreadService } from './sales-value-spread.service';
+
 @Component({
   selector: 'app-sales-value-spread',
   templateUrl: './sales-value-spread.component.html',
@@ -31,12 +33,16 @@ single: any[];
 		console.log(event);
 	}
 
-	constructor() {
+	constructor(
+		private _svs: SalesValueSpreadService
+	) {
 		Object.assign(this, { single });
 	}
 
 	ngOnInit() {
-
+		this._svs.get().then((response) => {
+			console.log(response);
+		});
 	}
 }
 

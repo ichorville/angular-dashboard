@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
+import { SalesSkuSpreadSummaryService } from './sales-sku-spread-summary.service';
+
 @Component({
-  selector: 'app-sales-sku-spread-summary',
-  templateUrl: './sales-sku-spread-summary.component.html',
-  styleUrls: ['./sales-sku-spread-summary.component.css']
+	selector: 'app-sales-sku-spread-summary',
+	templateUrl: './sales-sku-spread-summary.component.html',
+	styleUrls: ['./sales-sku-spread-summary.component.css']
 })
 export class SalesSkuSpreadSummaryComponent implements OnInit {
 	single: any[];
@@ -11,7 +13,7 @@ export class SalesSkuSpreadSummaryComponent implements OnInit {
 
 	view: any[] = [300, 200];
 
-	 // options
+	// options
 	showXAxis = true;
 	showYAxis = true;
 	gradient = false;
@@ -21,7 +23,7 @@ export class SalesSkuSpreadSummaryComponent implements OnInit {
 	showYAxisLabel = true;
 	yAxisLabel = 'Invoice count';
 	barPadding = 15;
-	
+
 	colorScheme = {
 		domain: [
 			'#A133D5', '#DD3F5C', '#1ABB9C'
@@ -32,12 +34,16 @@ export class SalesSkuSpreadSummaryComponent implements OnInit {
 		console.log(event);
 	}
 
-	constructor() {
+	constructor(
+		private _ssp: SalesSkuSpreadSummaryService
+	) {
 		Object.assign(this, { single });
 	}
 
 	ngOnInit() {
-
+		this._ssp.get().then((response) => {
+			console.log(response);
+		});
 	}
 }
 
@@ -98,5 +104,5 @@ export var multi = [
 			}
 		]
 	}
-];	
+];
 
