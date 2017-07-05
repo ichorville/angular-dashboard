@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { WorkForceTodayService } from './work-force-today.service';
+
 @Component({
 	selector: 'app-work-force-today',
 	templateUrl: './work-force-today.component.html',
@@ -32,12 +34,16 @@ export class WorkForceTodayComponent implements OnInit {
 		console.log(event);
 	}
 
-	constructor() {
+	constructor(
+		private _wfs: WorkForceTodayService
+	) {
 		Object.assign(this, { single });
 	}
 
 	ngOnInit() {
-
+		this._wfs.get().then((response) => {
+			console.log(response);
+		});
 	}
 }
 

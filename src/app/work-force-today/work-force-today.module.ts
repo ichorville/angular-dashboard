@@ -8,6 +8,7 @@ import { MaterialModule } from '@angular/material';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 import { WorkForceTodayComponent } from './work-force-today.component';
+import { WorkForceTodayService } from './work-force-today.service';
 
 @NgModule({
 	imports: [
@@ -24,6 +25,9 @@ import { WorkForceTodayComponent } from './work-force-today.component';
 	],
 	exports: [
 		WorkForceTodayComponent
+	],
+	providers: [
+		WorkForceTodayService
 	]
 })
 export class WorkForceTodayModule { }
