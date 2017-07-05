@@ -19,9 +19,9 @@ export class WorkForceTodayComponent implements OnInit {
 	showYAxis = true;
 	gradient = false;
 	showLegend = true;
-	showXAxisLabel = true;
+	showXAxisLabel = false;
 	xAxisLabel = '';
-	showYAxisLabel = true;
+	showYAxisLabel = false;
 	yAxisLabel = 'Invoice Count';
 
 	colorScheme = {
