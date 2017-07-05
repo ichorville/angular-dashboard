@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ReturnsByReasonService} from './returns-by-reason.service';
 
 @Component({
 	selector: 'app-returns-by-reason',
@@ -23,7 +24,9 @@ export class ReturnsByReasonComponent implements OnInit {
 	explodeSlices = false;
 	doughnut = false;
 
-	constructor() {
+	constructor(
+		private _rbr: ReturnsByReasonService
+	) {
 		Object.assign(this, { single, multi })
 	}
 
@@ -33,6 +36,9 @@ export class ReturnsByReasonComponent implements OnInit {
 
 
 	ngOnInit() {
+		this._rbr.get().then((response) => {
+			console.log(response);
+		});
 	}
 
 }

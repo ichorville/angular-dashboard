@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DiscountVsSalesService} from './discounts-vs-sales.service';
 
 @Component({
 	selector: 'app-discounts-vs-sales',
@@ -27,7 +28,9 @@ export class DiscountsVsSalesComponent implements OnInit {
 		domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
 	};
 
-	constructor() {
+	constructor(
+		private _dvs: DiscountVsSalesService
+	) {
 		Object.assign(this, { single, multi })
 	}
 
@@ -35,7 +38,9 @@ export class DiscountsVsSalesComponent implements OnInit {
 		console.log(event);
 	}
 	ngOnInit() {
-
+		this._dvs.get().then((response) => {
+			console.log(response);
+		});
 	}
 }
 

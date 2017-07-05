@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FirstCallTimeService} from './first-call-time.service';
 
 @Component({
 	selector: 'app-first-call-time',
@@ -29,7 +30,9 @@ export class FirstCallTimeComponent implements OnInit {
 	// line, area
 	autoScale = true;
 
-	constructor() {
+	constructor(
+		private _fct: FirstCallTimeService
+	) {
 		Object.assign(this, { single, multi })
 	}
 
@@ -39,6 +42,9 @@ export class FirstCallTimeComponent implements OnInit {
 
 
 	ngOnInit() {
+		this._fct.get().then((response) => {
+			console.log(response);
+		});
 	}
 
 }
