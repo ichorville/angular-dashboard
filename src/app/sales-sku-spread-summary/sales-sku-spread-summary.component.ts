@@ -37,10 +37,24 @@ export class SalesSkuSpreadSummaryComponent implements OnInit {
 	constructor(
 		private _ssp: SalesSkuSpreadSummaryService
 	) {
-		Object.assign(this, { single });
+		this.single = [];
 	}
 
 	ngOnInit() {
+		this._ssp.get().then((response) => {
+			if (!response) {
+				return '404';
+			}
+			let temp: any[] = [];
+			response['results'].forEach(element => {
+				let object = {
+					'name': element['NoOfSKUs'],
+					'value': element['NoOfInvoices']
+				};
+				temp.push(object);
+			});
+			this.single = temp;
+		});
 		// this._ssp.get().then((response) => {
 		// 	console.log(response);
 		// });

@@ -28,7 +28,7 @@ export class ReturnsByReasonComponent implements OnInit {
 	constructor(
 		private _rbr: ReturnsByReasonService
 	) {
-		Object.assign(this, { single, multi })
+		this.single=[];
 	}
 
 	onSelect(event) {
@@ -37,6 +37,20 @@ export class ReturnsByReasonComponent implements OnInit {
 
 
 	ngOnInit() {
+		this._rbr.get().then((response) => {
+			if (!response) {
+				return '404';
+			}
+			let temp: any[] = [];
+			response['results'].forEach(element => {
+				let object = {
+					'name': element['Reason'],
+					'value': element['Volume']
+				};
+				temp.push(object);
+			});
+			this.single = temp;
+		});
 		// this._rbr.get().then((response) => {
 		// 	console.log(response);
 		// });

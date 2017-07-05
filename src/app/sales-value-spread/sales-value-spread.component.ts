@@ -36,72 +36,28 @@ single: any[];
 	constructor(
 		private _svs: SalesValueSpreadService
 	) {
-		Object.assign(this, { single });
+		this.single = [];
 	}
 
 	ngOnInit() {
 		// this._svs.get().then((response) => {
 		// 	console.log(response);
 		// });
+
+		this._svs.get().then((response) => {
+			if (!response) {
+				return '404';
+			}
+			let temp: any[] = [];
+			response['results'].forEach(element => {
+				let object = {
+					'name': element['Label'],
+					'value': element['InvoiceCount']
+				};
+				temp.push(object);
+			});
+			this.single = temp;
+		});
 	}
 }
-
-export var single = [
-	{
-		"name": "1",
-		"value": 8940000
-	},
-	{
-		"name": "2",
-		"value": 5000000
-	},
-	{
-		"name": "3",
-		"value": 7200000
-	}
-];
-
-export var multi = [
-	{
-		"name": "Germany",
-		"series": [
-			{
-				"name": "2010",
-				"value": 7300000
-			},
-			{
-				"name": "2011",
-				"value": 8940000
-			}
-		]
-	},
-
-	{
-		"name": "USA",
-		"series": [
-			{
-				"name": "2010",
-				"value": 7870000
-			},
-			{
-				"name": "2011",
-				"value": 8270000
-			}
-		]
-	},
-
-	{
-		"name": "France",
-		"series": [
-			{
-				"name": "2010",
-				"value": 5000002
-			},
-			{
-				"name": "2011",
-				"value": 5800000
-			}
-		]
-	}
-];	
 

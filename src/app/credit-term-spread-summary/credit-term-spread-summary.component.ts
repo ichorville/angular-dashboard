@@ -19,9 +19,9 @@ export class CreditTermSpreadSummaryComponent implements OnInit {
 	gradient = false;
 	showLegend = true;
 	showXAxisLabel = true;
-	xAxisLabel = 'Country';
+	xAxisLabel = 'Credit term';
 	showYAxisLabel = true;
-	yAxisLabel = 'Population';
+	yAxisLabel = 'Sales value';
 	barPadding = 15;
 	
 	colorScheme = {
