@@ -16,11 +16,11 @@ single: any[];
 	 // options
 	showXAxis = true;
 	showYAxis = true;
-	gradient = false;
+	gradient = true;
 	showLegend = true;
-	showXAxisLabel = true;
+	showXAxisLabel = false;
 	xAxisLabel = '';
-	showYAxisLabel = true;
+	showYAxisLabel = false;
 	yAxisLabel = 'invoice count';
 	
 	colorScheme = {

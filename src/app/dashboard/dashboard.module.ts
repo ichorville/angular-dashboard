@@ -15,6 +15,7 @@ import { WorkForceTodayModule } from '../work-force-today/work-force-today.modul
 import { DiscountsVsSalesModule } from '../discounts-vs-sales/discounts-vs-sales.module';
 import { FirstCallTimeModule } from '../first-call-time/first-call-time.module';
 import { ReturnsByReasonModule } from '../returns-by-reason/returns-by-reason.module';
+import {SecondarySalesSummaryModule} from '../secondary-sales-summary/secondary-sales-summary.module';
 
 import { DashboardComponent } from './dashboard.component';
 import { routing } from './dashboard.routing';
@@ -36,6 +37,7 @@ import { routing } from './dashboard.routing';
 		DiscountsVsSalesModule,
 		FirstCallTimeModule,
 		ReturnsByReasonModule,
+		SecondarySalesSummaryModule,
 		routing
 	],
 	declarations: [
