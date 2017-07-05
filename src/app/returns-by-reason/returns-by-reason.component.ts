@@ -35,7 +35,6 @@ export class ReturnsByReasonComponent implements OnInit {
 		console.log(event);
 	}
 
-
 	ngOnInit() {
 		this._rbr.get().then((response) => {
 			if (!response) {
@@ -51,66 +50,5 @@ export class ReturnsByReasonComponent implements OnInit {
 			});
 			this.single = temp;
 		});
-		// this._rbr.get().then((response) => {
-		// 	console.log(response);
-		// });
 	}
-
 }
-export var single = [
-	{
-		"name": "Credit",
-		"value": 8940000
-	},
-	{
-		"name": "Daily",
-		"value": 5000000
-	},
-	{
-		"name": "Sales",
-		"value": 7200000
-	}
-];
-export var multi = [
-	{
-		"name": "Germany",
-		"series": [
-			{
-				"name": "2010",
-				"value": 7300000
-			},
-			{
-				"name": "2011",
-				"value": 8940000
-			}
-		]
-	},
-
-	{
-		"name": "USA",
-		"series": [
-			{
-				"name": "2010",
-				"value": 7870000
-			},
-			{
-				"name": "2011",
-				"value": 8270000
-			}
-		]
-	},
-
-	{
-		"name": "France",
-		"series": [
-			{
-				"name": "2010",
-				"value": 5000002
-			},
-			{
-				"name": "2011",
-				"value": 5800000
-			}
-		]
-	}
-];	
