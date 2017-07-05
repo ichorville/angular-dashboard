@@ -1,0 +1,15 @@
+<md-card>
+	<h3>Cash Vs Credit</h3>
+	<ngx-charts-bar-horizontal-2d
+		[view]="view"
+		[scheme]="colorScheme"
+		[results]="multi"
+		[gradient]="gradient"
+		[xAxis]="showXAxis"
+		[yAxis]="showYAxis"
+		[barPadding]="barPadding"
+		[xAxisLabel]="xAxisLabel"
+		[yAxisLabel]="yAxisLabel"
+		(select)="onSelect($event)">
+	</ngx-charts-bar-horizontal-2d>
+</md-card>
