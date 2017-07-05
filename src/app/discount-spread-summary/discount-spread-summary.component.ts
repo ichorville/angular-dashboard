@@ -8,8 +8,8 @@ import { DiscountSpreadSummaryService } from './discount-spread-summary.service'
 	styleUrls: ['./discount-spread-summary.component.css']
 })
 export class DiscountSpreadSummaryComponent implements OnInit {
+	
 	single: any[];
-	multi: any[];
 
 	view: any[] = [300, 200];
 
@@ -37,7 +37,7 @@ export class DiscountSpreadSummaryComponent implements OnInit {
 	constructor(
 		private _dsss: DiscountSpreadSummaryService
 	) {
-		
+		this.single = [];
 	}
 
 	ngOnInit() {
