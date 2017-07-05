@@ -1,52 +1,52 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-returns-by-reason',
-  templateUrl: './returns-by-reason.component.html',
-  styleUrls: ['./returns-by-reason.component.css']
+	selector: 'app-returns-by-reason',
+	templateUrl: './returns-by-reason.component.html',
+	styleUrls: ['./returns-by-reason.component.css']
 })
 export class ReturnsByReasonComponent implements OnInit {
-single: any[];
-  multi: any[];
+	single: any[];
+	multi: any[];
 
-  view: any[] = [700, 400];
+	view: any[] = [350, 200];
 
-  // options
-  showLegend = true;
+	// options
+	showLegend = true;
 
-  colorScheme = {
-    domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
-  };
+	colorScheme = {
+		domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
+	};
 
-  // pie
-  showLabels = true;
-  explodeSlices = false;
-  doughnut = false;
+	// pie
+	showLabels = true;
+	explodeSlices = false;
+	doughnut = false;
 
-  constructor() {
-    Object.assign(this, {single, multi})   
-  }
-  
-  onSelect(event) {
-    console.log(event);
-  }
-  
+	constructor() {
+		Object.assign(this, { single, multi })
+	}
 
-  ngOnInit() {
-  }
+	onSelect(event) {
+		console.log(event);
+	}
+
+
+	ngOnInit() {
+	}
 
 }
 export var single = [
 	{
-		"name": "1",
+		"name": "Credit",
 		"value": 8940000
 	},
 	{
-		"name": "2",
+		"name": "Daily",
 		"value": 5000000
 	},
 	{
-		"name": "3",
+		"name": "Sales",
 		"value": 7200000
 	}
 ];

@@ -1,22 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
-body {
-    margin: 0px;
-    color: #73879C;
-    background: #2A3F54;
-    font-family: "Helvetica Neue",Roboto,Arial,"Droid Sans",sans-serif;
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 1.471;
-}
-.ngx-charts-outer {
-    width: 100% !important;
-    overflow-x: scroll;
+body{
+    font-family: 'RobotoDraft', 'Roboto', 'Helvetica Neue, Helvetica, Arial', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1rem;
+    letter-spacing: 0.01rem;
+    color: #212121;
+    background-color: #f5f5f5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    margin:20px
 }
 .ngx-charts {
-    display: flex !important;
+    float: none !important; 
+    overflow: visible;
+    font-size: 20px !important;
 }
-.chart-legend {
-    display: flex !important;
+h3 {
+    font-weight: 400 !important;
+    text-align: center;
+}
+md-card {
+    margin-bottom: 15px;
 }

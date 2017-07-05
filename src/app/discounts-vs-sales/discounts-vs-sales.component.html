@@ -1,14 +1,15 @@
-<ngx-charts-bar-horizontal
-      [view]="view"
-      [scheme]="colorScheme"
-      [results]="single"
-      [gradient]="gradient"
-      [xAxis]="showXAxis"
-      [yAxis]="showYAxis"
-      [legend]="showLegend"
-      [showXAxisLabel]="showXAxisLabel"
-      [showYAxisLabel]="showYAxisLabel"
-      [xAxisLabel]="xAxisLabel"
-      [yAxisLabel]="yAxisLabel"
-      (select)="onSelect($event)">
-    </ngx-charts-bar-horizontal>
+<md-card>
+	<h3>Discount Vs. Sales</h3>
+	<ngx-charts-bar-horizontal
+		[view]="view"
+		[scheme]="colorScheme"
+		[results]="single"
+		[gradient]="gradient"
+		[xAxis]="showXAxis"
+		[yAxis]="showYAxis"
+		[barPadding]="barPadding"
+		[xAxisLabel]="xAxisLabel"
+		[yAxisLabel]="yAxisLabel"
+		(select)="onSelect($event)">
+	</ngx-charts-bar-horizontal>
+</md-card>
