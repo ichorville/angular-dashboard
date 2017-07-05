@@ -1,17 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import {DiscountSpreadSummaryService} from './discount-spread-summary.service';
+
+import { DiscountSpreadSummaryService } from './discount-spread-summary.service';
+
 @Component({
-  selector: 'app-discount-spread-summary',
-  templateUrl: './discount-spread-summary.component.html',
-  styleUrls: ['./discount-spread-summary.component.css']
+	selector: 'app-discount-spread-summary',
+	templateUrl: './discount-spread-summary.component.html',
+	styleUrls: ['./discount-spread-summary.component.css']
 })
 export class DiscountSpreadSummaryComponent implements OnInit {
-single: any[];
+	single: any[];
 	multi: any[];
 
 	view: any[] = [300, 200];
 
-	 // options
+	// options
 	showXAxis = true;
 	showYAxis = true;
 	gradient = false;
@@ -21,7 +23,7 @@ single: any[];
 	showYAxisLabel = true;
 	yAxisLabel = 'Invoice Count';
 	barPadding = 15;
-	
+
 	colorScheme = {
 		domain: [
 			'#A133D5', '#DD3F5C', '#1ABB9C'
@@ -102,6 +104,5 @@ export var multi = [
 			}
 		]
 	}
-];	
+];
 
-  

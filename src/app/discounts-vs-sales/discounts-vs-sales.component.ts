@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {DiscountVsSalesService} from './discounts-vs-sales.service';
+
+import { DiscountVsSalesService } from './discounts-vs-sales.service';
 
 @Component({
 	selector: 'app-discounts-vs-sales',

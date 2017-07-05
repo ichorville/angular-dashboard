@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {ReturnsByReasonService} from './returns-by-reason.service';
+
+import { ReturnsByReasonService } from './returns-by-reason.service';
 
 @Component({
 	selector: 'app-returns-by-reason',

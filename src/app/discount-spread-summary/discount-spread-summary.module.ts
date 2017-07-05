@@ -8,7 +8,8 @@ import { MaterialModule } from '@angular/material';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 import { DiscountSpreadSummaryComponent } from './discount-spread-summary.component';
-import {DiscountSpreadSummaryService} from './discount-spread-summary.service';
+import { DiscountSpreadSummaryService } from './discount-spread-summary.service';
+
 @NgModule({
 	imports: [
 		BrowserModule,
