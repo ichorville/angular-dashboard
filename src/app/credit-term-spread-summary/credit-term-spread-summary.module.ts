@@ -8,6 +8,7 @@ import { MaterialModule } from '@angular/material';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 import { CreditTermSpreadSummaryComponent } from './credit-term-spread-summary.component';
+import { CreditTermSpreadSummaryService } from './credit-term-spread-summary.service';
 
 @NgModule({
 	imports: [
@@ -24,6 +25,9 @@ import { CreditTermSpreadSummaryComponent } from './credit-term-spread-summary.c
 	],
 	exports: [
 		CreditTermSpreadSummaryComponent
+	],
+	providers: [
+		CreditTermSpreadSummaryService
 	]
 })
 export class CreditTermSpreadSummaryModule { }
