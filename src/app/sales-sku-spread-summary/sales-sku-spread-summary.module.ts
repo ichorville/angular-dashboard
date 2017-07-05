@@ -8,6 +8,7 @@ import { MaterialModule } from '@angular/material';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 import { SalesSkuSpreadSummaryComponent } from './sales-sku-spread-summary.component';
+import { SalesSkuSpreadSummaryService } from './sales-sku-spread-summary.service';
 
 @NgModule({
 	imports: [
@@ -24,6 +25,9 @@ import { SalesSkuSpreadSummaryComponent } from './sales-sku-spread-summary.compo
 	],
 	exports: [
 		SalesSkuSpreadSummaryComponent
+	],
+	providers: [
+		SalesSkuSpreadSummaryService
 	]
 })
 export class SalesSkuSpreadSummaryModule { }
