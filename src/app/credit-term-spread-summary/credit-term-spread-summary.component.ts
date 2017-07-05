@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { CreditTermSpreadSummaryService } from './credit-term-spread-summary.service';
+
 @Component({
 	selector: 'app-credit-term-spread-summary',
 	templateUrl: './credit-term-spread-summary.component.html',
@@ -33,12 +35,16 @@ export class CreditTermSpreadSummaryComponent implements OnInit {
 		console.log(event);
 	}
 
-	constructor() {
+	constructor( 
+		private _css: CreditTermSpreadSummaryService
+	) {
 		Object.assign(this, { single });
 	}
 
 	ngOnInit() {
-
+		this._css.get().then((response) => {
+			console.log(response);
+		});
 	}
 }
 
