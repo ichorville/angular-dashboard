@@ -41,9 +41,9 @@ export class WorkForceTodayComponent implements OnInit {
 	}
 
 	ngOnInit() {
-		this._wfs.get().then((response) => {
-			console.log(response);
-		});
+		// this._wfs.get().then((response) => {
+		// 	console.log(response);
+		// });
 	}
 }
 

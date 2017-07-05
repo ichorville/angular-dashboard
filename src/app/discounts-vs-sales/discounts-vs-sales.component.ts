@@ -39,9 +39,9 @@ export class DiscountsVsSalesComponent implements OnInit {
 		console.log(event);
 	}
 	ngOnInit() {
-		this._dvs.get().then((response) => {
-			console.log(response);
-		});
+		// this._dvs.get().then((response) => {
+		// 	console.log(response);
+		// });
 	}
 }
 

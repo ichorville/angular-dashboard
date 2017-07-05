@@ -40,9 +40,9 @@ single: any[];
 	}
 
 	ngOnInit() {
-		this._svs.get().then((response) => {
-			console.log(response);
-		});
+		// this._svs.get().then((response) => {
+		// 	console.log(response);
+		// });
 	}
 }
 

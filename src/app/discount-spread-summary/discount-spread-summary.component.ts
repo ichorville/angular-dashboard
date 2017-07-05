@@ -41,9 +41,9 @@ export class DiscountSpreadSummaryComponent implements OnInit {
 	}
 
 	ngOnInit() {
-		this._dsss.get().then((response) => {
-			console.log(response);
-		});
+		// this._dsss.get().then((response) => {
+		// 	console.log(response);
+		// });
 	}
 }
 
