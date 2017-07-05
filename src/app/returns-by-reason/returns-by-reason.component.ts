@@ -37,9 +37,9 @@ export class ReturnsByReasonComponent implements OnInit {
 
 
 	ngOnInit() {
-		this._rbr.get().then((response) => {
-			console.log(response);
-		});
+		// this._rbr.get().then((response) => {
+		// 	console.log(response);
+		// });
 	}
 
 }

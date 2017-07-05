@@ -10,7 +10,6 @@ import { CreditTermSpreadSummaryService } from './credit-term-spread-summary.ser
 export class CreditTermSpreadSummaryComponent implements OnInit {
 
 	single: any[];
-	multi: any[];
 
 	view: any[] = [300, 200];
 
@@ -38,71 +37,23 @@ export class CreditTermSpreadSummaryComponent implements OnInit {
 	constructor( 
 		private _css: CreditTermSpreadSummaryService
 	) {
-		Object.assign(this, { single });
+		this.single = [];
 	}
 
 	ngOnInit() {
 		this._css.get().then((response) => {
-			console.log(response);
+			if (!response) {
+				return '404';
+			}
+			let temp: any[] = [];
+			response['results'].forEach(element => {
+				let object = {
+					'name': element['Type'],
+					'value': element['Value']
+				};
+				temp.push(object);
+			});
+			this.single = temp;
 		});
 	}
 }
-
-export var single = [
-	{
-		"name": "Germany",
-		"value": 8940000
-	},
-	{
-		"name": "USA",
-		"value": 5000000
-	},
-	{
-		"name": "France",
-		"value": 7200000
-	}
-];
-
-export var multi = [
-	{
-		"name": "Germany",
-		"series": [
-			{
-				"name": "2010",
-				"value": 7300000
-			},
-			{
-				"name": "2011",
-				"value": 8940000
-			}
-		]
-	},
-
-	{
-		"name": "USA",
-		"series": [
-			{
-				"name": "2010",
-				"value": 7870000
-			},
-			{
-				"name": "2011",
-				"value": 8270000
-			}
-		]
-	},
-
-	{
-		"name": "France",
-		"series": [
-			{
-				"name": "2010",
-				"value": 5000002
-			},
-			{
-				"name": "2011",
-				"value": 5800000
-			}
-		]
-	}
-];	

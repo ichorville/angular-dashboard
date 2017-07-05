@@ -41,9 +41,9 @@ export class SalesSkuSpreadSummaryComponent implements OnInit {
 	}
 
 	ngOnInit() {
-		this._ssp.get().then((response) => {
-			console.log(response);
-		});
+		// this._ssp.get().then((response) => {
+		// 	console.log(response);
+		// });
 	}
 }
 

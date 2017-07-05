@@ -43,9 +43,9 @@ export class FirstCallTimeComponent implements OnInit {
 
 
 	ngOnInit() {
-		this._fct.get().then((response) => {
-			console.log(response);
-		});
+		// this._fct.get().then((response) => {
+		// 	console.log(response);
+		// });
 	}
 
 }
