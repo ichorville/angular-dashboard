@@ -41,10 +41,28 @@ export class WorkForceTodayComponent implements OnInit {
 	}
 
 	ngOnInit() {
-	
-		// this._wfs.get().then((response) => {
-		// 	console.log(response);
-		// });
+		this._wfs.get().then((response) => {
+			if (response.status == 500) {
+				return '404';
+			}
+			let temp: any[] = [];
+			response['results'].forEach(element => {
+				let object1 = {
+					'name': 'Absent Agent Count',
+					'value': element['AbsentAgentCount']
+				};
+				let object2 = {
+					'name': 'Active Agent Count',
+					'value': element['ActiveAgentCount']
+				};
+				let object3 = {
+					'name': 'Total Agent Count',
+					'value': element['TotalAgentCount']
+				};
+				temp.push(object1, object2, object3)
+			});
+			this.single = temp;
+		});
 	}
 }
 
