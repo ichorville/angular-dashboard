@@ -1,18 +1,17 @@
 <md-card>
-	 <h3>First Time Call</h3>
-	<ngx-charts-area-chart
+	<h3>First Time Call</h3>
+	<ngx-charts-bar-vertical
 		[view]="view"
 		[scheme]="colorScheme"
-		[results]="multi"
+		[results]="single"
 		[gradient]="gradient"
 		[xAxis]="showXAxis"
 		[yAxis]="showYAxis"
-		[legend]="showLegend"
+		[barPadding]="barPadding"
 		[showXAxisLabel]="showXAxisLabel"
 		[showYAxisLabel]="showYAxisLabel"
 		[xAxisLabel]="xAxisLabel"
 		[yAxisLabel]="yAxisLabel"
-		[autoScale]="autoScale"
 		(select)="onSelect($event)">
-	</ngx-charts-area-chart>
+	</ngx-charts-bar-vertical>
 </md-card>

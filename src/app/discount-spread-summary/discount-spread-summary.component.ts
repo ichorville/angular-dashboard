@@ -8,8 +8,8 @@ import { DiscountSpreadSummaryService } from './discount-spread-summary.service'
 	styleUrls: ['./discount-spread-summary.component.css']
 })
 export class DiscountSpreadSummaryComponent implements OnInit {
+	
 	single: any[];
-	multi: any[];
 
 	view: any[] = [300, 200];
 
@@ -37,72 +37,23 @@ export class DiscountSpreadSummaryComponent implements OnInit {
 	constructor(
 		private _dsss: DiscountSpreadSummaryService
 	) {
-		Object.assign(this, { single });
+		this.single = [];
 	}
 
 	ngOnInit() {
-		// this._dsss.get().then((response) => {
-		// 	console.log(response);
-		// });
+		this._dsss.get().then((response) => {
+			if (!response) {
+				return '404';
+			}
+			let temp: any[] = [];
+			response['results'].forEach(element => {
+				let object = {
+					'name': element['DiscountSlabs'],
+					'value': element['InvCount']
+				};
+				temp.push(object);
+			});
+			this.single = temp;
+		});
 	}
 }
-
-export var single = [
-	{
-		"name": "0-500",
-		"value": 8940000
-	},
-	{
-		"name": "500-1000",
-		"value": 5000000
-	},
-	{
-		"name": "1000-1500",
-		"value": 7200000
-	}
-];
-
-export var multi = [
-	{
-		"name": "Germany",
-		"series": [
-			{
-				"name": "2010",
-				"value": 7300000
-			},
-			{
-				"name": "2011",
-				"value": 8940000
-			}
-		]
-	},
-
-	{
-		"name": "USA",
-		"series": [
-			{
-				"name": "2010",
-				"value": 7870000
-			},
-			{
-				"name": "2011",
-				"value": 8270000
-			}
-		]
-	},
-
-	{
-		"name": "France",
-		"series": [
-			{
-				"name": "2010",
-				"value": 5000002
-			},
-			{
-				"name": "2011",
-				"value": 5800000
-			}
-		]
-	}
-];
-
