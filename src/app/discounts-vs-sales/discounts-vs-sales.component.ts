@@ -60,7 +60,6 @@ export class DiscountsVsSalesComponent implements OnInit {
 	}
 	ngOnInit() {
 		this._dvs.get().then((response) => {
-			console.log(response);
 			if (!response) {
 				return '404';
 			}

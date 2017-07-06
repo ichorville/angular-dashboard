@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { CashVsCreditService } from './cash-vs-credit.service';
 
@@ -8,6 +8,11 @@ import { CashVsCreditService } from './cash-vs-credit.service';
 	styleUrls: ['./cash-vs-credit.component.css']
 })
 export class CashVsCreditComponent implements OnInit {
+
+	// @Input()
+	// startDate: string;
+	// @Input()
+	// endDate: string;
 
 	multi: any[];
 
