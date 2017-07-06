@@ -65,6 +65,12 @@ export class CashVsCreditComponent implements OnInit {
 			}
 			let temp: any[] = [];
 			response['results'].forEach(element => {
+				if (element['Type'] == 'Primary Sales') {
+					element['Type'] = 'Primary';
+				} 
+				if (element['Type'] == 'Secondary Sales') {
+					element['Type'] = 'Secondary';
+				}
 				let object = {
 					'name': element['Type'],
 					'series': [

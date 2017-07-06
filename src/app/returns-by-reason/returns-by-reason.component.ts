@@ -42,7 +42,7 @@ export class ReturnsByReasonComponent implements OnInit {
 
 	// pie
 	showLabels = true;
-	explodeSlices = true;
+	explodeSlices = false;
 	doughnut = false;
 
 	constructor(

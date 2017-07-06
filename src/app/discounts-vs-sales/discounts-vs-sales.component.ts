@@ -60,11 +60,18 @@ export class DiscountsVsSalesComponent implements OnInit {
 	}
 	ngOnInit() {
 		this._dvs.get().then((response) => {
+			console.log(response);
 			if (!response) {
 				return '404';
 			}
 			let temp: any[] = [];
 			response['results'].forEach(element => {
+				if (element['Type'] == 'Primary Sales') {
+					element['Type'] = 'Primary';
+				} 
+				if (element['Type'] == 'Secondary Sales') {
+					element['Type'] = 'Secondary';
+				}
 				let object = {
 					'name': element['Type'],
 					'series': [

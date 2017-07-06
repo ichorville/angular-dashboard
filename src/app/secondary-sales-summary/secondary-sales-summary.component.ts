@@ -70,13 +70,13 @@ export class SecondarySalesSummaryComponent implements OnInit {
 				}
 				if (element['TodaySecondarySales'] == null) {
 					let object3 = {
-						'name': 'Today',
+						'name': 'Secondary Sales Today',
 						'value': 0
 					};
 					temp3.push(object3);
 				} else {
 					let object3 = {
-						'name': 'Today',
+						'name': 'Secondary Sales Today',
 						'value': element['TodaySecondarySales']
 					};
 					temp3.push(object3);

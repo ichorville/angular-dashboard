@@ -13,7 +13,7 @@ export class SecondarySalesSummaryService {
     private options: RequestOptions;
 
     constructor(private http: Http) {
-        this.url = `${ GlobalVariable.BASE_API_URL }/SecondrySales`;
+        this.url = `${ GlobalVariable.BASE_API_URL }/secondrysales`;
         this.headers = new Headers({
             'Content-Type': 'application/json'
         });
