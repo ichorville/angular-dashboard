@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { FirstCallTimeService } from './first-call-time.service';
 
@@ -8,6 +8,11 @@ import { FirstCallTimeService } from './first-call-time.service';
 	styleUrls: ['./first-call-time.component.css']
 })
 export class FirstCallTimeComponent implements OnInit {
+
+	@Input()
+	startDate: string;
+	@Input()
+	endDate: string;
 
 	single: any[];
 
@@ -62,7 +67,7 @@ export class FirstCallTimeComponent implements OnInit {
 	}
 
 	ngOnInit() {
-		this._fct.get().then((response) => {
+		this._fct.get(this.startDate, this.endDate).then((response) => {
 			if (response.status == 500) {
 				return '404';
 			}

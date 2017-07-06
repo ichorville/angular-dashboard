@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { DiscountSpreadSummaryService } from './discount-spread-summary.service';
 
@@ -8,6 +8,11 @@ import { DiscountSpreadSummaryService } from './discount-spread-summary.service'
 	styleUrls: ['./discount-spread-summary.component.css']
 })
 export class DiscountSpreadSummaryComponent implements OnInit {
+
+	@Input()
+	startDate: string;
+	@Input()
+	endDate: string;
 	
 	single: any[];
 
@@ -59,7 +64,7 @@ export class DiscountSpreadSummaryComponent implements OnInit {
 	}
 
 	ngOnInit() {
-		this._dsss.get().then((response) => {
+		this._dsss.get(this.startDate, this.endDate).then((response) => {
 			if (!response) {
 				return '404';
 			}

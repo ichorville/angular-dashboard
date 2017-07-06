@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { DiscountVsSalesService } from './discounts-vs-sales.service';
 
@@ -8,6 +8,11 @@ import { DiscountVsSalesService } from './discounts-vs-sales.service';
 	styleUrls: ['./discounts-vs-sales.component.css']
 })
 export class DiscountsVsSalesComponent implements OnInit {
+
+	@Input()
+	startDate: string;
+	@Input()
+	endDate: string;
 
 	single: any[];
 	multi: any[];
@@ -59,7 +64,7 @@ export class DiscountsVsSalesComponent implements OnInit {
 		console.log(event);
 	}
 	ngOnInit() {
-		this._dvs.get().then((response) => {
+		this._dvs.get(this.startDate, this.endDate).then((response) => {
 			if (!response) {
 				return '404';
 			}

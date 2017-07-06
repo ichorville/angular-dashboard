@@ -21,7 +21,7 @@ export class CreditTermSpreadSummaryService {
     }
 
     get(startDate: any, endDate: any): Promise<any> {
-        return this.http.get(`${ this.url }startDate=${startDate}&endDate=${endDate}`, this.options).toPromise().then((response) => {
+        return this.http.get(`${ this.url }startDate=${ startDate }&endDate=${ endDate }`, this.options).toPromise().then((response) => {
             return response.json();
         });
     }

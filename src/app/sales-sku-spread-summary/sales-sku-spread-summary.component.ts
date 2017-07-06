@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { SalesSkuSpreadSummaryService } from './sales-sku-spread-summary.service';
 
@@ -8,6 +8,12 @@ import { SalesSkuSpreadSummaryService } from './sales-sku-spread-summary.service
 	styleUrls: ['./sales-sku-spread-summary.component.css']
 })
 export class SalesSkuSpreadSummaryComponent implements OnInit {
+
+	@Input()
+	startDate: string;
+	@Input()
+	endDate: string;
+
 	single: any[];
 	multi: any[];
 
@@ -59,7 +65,7 @@ export class SalesSkuSpreadSummaryComponent implements OnInit {
 	}
 
 	ngOnInit() {
-		this._ssp.get().then((response) => {
+		this._ssp.get(this.startDate, this.endDate).then((response) => {
 			if (!response) {
 				return '404';
 			}
@@ -73,68 +79,5 @@ export class SalesSkuSpreadSummaryComponent implements OnInit {
 			});
 			this.single = temp;
 		});
-		// this._ssp.get().then((response) => {
-		// 	console.log(response);
-		// });
 	}
 }
-
-export var single = [
-	{
-		"name": "Outlet 1",
-		"value": 8940000
-	},
-	{
-		"name": "Outlet 2",
-		"value": 5000000
-	},
-	{
-		"name": "Outlet 3",
-		"value": 7200000
-	}
-];
-
-export var multi = [
-	{
-		"name": "Germany",
-		"series": [
-			{
-				"name": "2010",
-				"value": 7300000
-			},
-			{
-				"name": "2011",
-				"value": 8940000
-			}
-		]
-	},
-
-	{
-		"name": "USA",
-		"series": [
-			{
-				"name": "2010",
-				"value": 7870000
-			},
-			{
-				"name": "2011",
-				"value": 8270000
-			}
-		]
-	},
-
-	{
-		"name": "France",
-		"series": [
-			{
-				"name": "2010",
-				"value": 5000002
-			},
-			{
-				"name": "2011",
-				"value": 5800000
-			}
-		]
-	}
-];
-

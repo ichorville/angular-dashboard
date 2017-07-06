@@ -9,10 +9,10 @@ import { CashVsCreditService } from './cash-vs-credit.service';
 })
 export class CashVsCreditComponent implements OnInit {
 
-	// @Input()
-	// startDate: string;
-	// @Input()
-	// endDate: string;
+	@Input()
+	startDate: string;
+	@Input()
+	endDate: string;
 
 	multi: any[];
 
@@ -64,7 +64,7 @@ export class CashVsCreditComponent implements OnInit {
 	}
 
 	ngOnInit() {
-		this._cvc.get().then((response) => {
+		this._cvc.get(this.startDate, this.endDate).then((response) => {
 			if (!response) {
 				return '404';
 			}
