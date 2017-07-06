@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import 'hammerjs';
 
+import { LoginModule } from './login/login.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { CreditTermSpreadSummaryModule } from './credit-term-spread-summary/credit-term-spread-summary.module';
 
@@ -24,6 +25,7 @@ import { routing } from './app.routing';
 		MaterialModule,
 		BrowserAnimationsModule,
 		NgxChartsModule,
+		LoginModule,
 		DashboardModule,
 		CreditTermSpreadSummaryModule,
 		routing
