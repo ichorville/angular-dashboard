@@ -46,7 +46,6 @@ export class CashVsCreditComponent implements OnInit {
 				return '404';
 			}
 			let temp: any[] = [];
-			console.log(response);
 			response['results'].forEach(element => {
 				let object = {
 					'name': element['Type'],

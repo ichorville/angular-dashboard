@@ -10,7 +10,9 @@ md-sidenav {
 .pusher {
 	padding: 20px;
     padding-top: 70px;
-	background: #F7F7F7;
+	background: #1B1E27;
+    margin-top: 10px;
+    /*background: linear-gradient(#1B1E27, white);*/
 }
 md-list-item.active {
     border-right: 5px solid #1ABB9C;
@@ -35,7 +37,7 @@ md-toolbar {
     color: #5A738E;
 }
 md-sidenav-container {
-	height: 1300px;
+	height: 1500px;
     bottom: 0px;
 }
 md-nav-list {

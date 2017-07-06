@@ -1,30 +1,33 @@
-  <div class="col-md-2">
-    <md-card>
-  <ngx-charts-number-card
-      [view]="view"
-      
-      [results]="ytd"
-      (select)="onSelect($event)">
-    </ngx-charts-number-card>
-    </md-card>
-  </div>
-   <div class="col-md-2">
-    <md-card>
-  <ngx-charts-number-card
-      [view]="view"
-      [scheme]="colorScheme"
-      [results]="mtd"
-      (select)="onSelect($event)">
-    </ngx-charts-number-card>
-    </md-card>
-  </div>
-   <div class="col-md-2">
-    <md-card>
-  <ngx-charts-number-card
-      [view]="view"
-      [scheme]="colorScheme"
-      [results]="today"
-      (select)="onSelect($event)">
-    </ngx-charts-number-card>
-    </md-card>
-  </div>
+<div class="col-md-4">
+	<md-card>
+		<ngx-charts-number-card 
+			[view]="view" 
+			[scheme]="colorScheme" 
+			[results]="ytd" 
+			[bandColor]="ytdbandColor"
+			(select)="onSelect($event)">
+		</ngx-charts-number-card>
+	</md-card>
+</div>
+<div class="col-md-4">
+	<md-card>
+    	<ngx-charts-number-card 
+			[view]="view" 
+			[scheme]="colorScheme" 
+			[results]="mtd" 
+			[bandColor]="mtdbandColor"
+			(select)="onSelect($event)">
+		</ngx-charts-number-card>
+	</md-card>
+</div>
+<div class="col-md-4">
+	<md-card>
+		<ngx-charts-number-card 
+			[view]="view" 
+			[scheme]="colorScheme" 
+			[results]="today" 
+			[bandColor]="todaybandColor"
+			(select)="onSelect($event)">
+		</ngx-charts-number-card>
+	</md-card>
+</div>
