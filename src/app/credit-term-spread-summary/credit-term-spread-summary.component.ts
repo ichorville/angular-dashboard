@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { CreditTermSpreadSummaryService } from './credit-term-spread-summary.service';
 
@@ -8,6 +8,11 @@ import { CreditTermSpreadSummaryService } from './credit-term-spread-summary.ser
 	styleUrls: ['./credit-term-spread-summary.component.css']
 })
 export class CreditTermSpreadSummaryComponent implements OnInit {
+
+	@Input()
+	startDate: string;
+	@Input()
+	endDate: string;
 
 	single: any[];
 
@@ -59,7 +64,7 @@ export class CreditTermSpreadSummaryComponent implements OnInit {
 	}
 
 	ngOnInit() {
-		this._css.get().then((response) => {
+		this._css.get(this.startDate, this.endDate).then((response) => {
 			if (!response) {
 				return '404';
 			}

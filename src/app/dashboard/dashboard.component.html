@@ -44,7 +44,10 @@
 		</div>
 		<div class="row">
 			<div class="col-md-4">
-				<app-credit-term-spread-summary></app-credit-term-spread-summary>
+				<app-credit-term-spread-summary
+					[startDate]="startDate"
+					[endDate]="endDate">
+				</app-credit-term-spread-summary>
 			</div>
 			<div class="col-md-4">
 				<app-discount-spread-summary></app-discount-spread-summary>
