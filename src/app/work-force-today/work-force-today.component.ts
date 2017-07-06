@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { WorkForceTodayService } from './work-force-today.service';
 
@@ -8,6 +8,10 @@ import { WorkForceTodayService } from './work-force-today.service';
 	styleUrls: ['./work-force-today.component.css']
 })
 export class WorkForceTodayComponent implements OnInit {
+	@Input()
+	startDate: string;
+	@Input()
+	endDate: string;
 
 	single: any[];
 	multi: any[];
@@ -63,7 +67,7 @@ export class WorkForceTodayComponent implements OnInit {
 	}
 
 	ngOnInit() {
-		this._wfs.get().then((response) => {
+		this._wfs.get(this.startDate, this.endDate).then((response) => {
 			if (response.status == 500) {
 				return '404';
 			}

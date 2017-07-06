@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,  Input } from '@angular/core';
 
 import { SalesValueSpreadService } from './sales-value-spread.service';
 
@@ -8,7 +8,12 @@ import { SalesValueSpreadService } from './sales-value-spread.service';
   styleUrls: ['./sales-value-spread.component.css']
 })
 export class SalesValueSpreadComponent implements OnInit {
-single: any[];
+	@Input()
+	startDate: string;
+	@Input()
+	endDate: string;
+
+	single: any[];
 	multi: any[];
 
 	view: any[] = [200, 200];
@@ -58,7 +63,7 @@ single: any[];
 	}
 
 	ngOnInit() {
-		this._svs.get().then((response) => {
+		this._svs.get(this.startDate, this.endDate).then((response) => {
 			if (!response) {
 				return '404';
 			}
