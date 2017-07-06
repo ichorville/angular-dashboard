@@ -17,7 +17,7 @@ export class WorkForceTodayComponent implements OnInit {
 	// options
 	showXAxis = true;
 	showYAxis = true;
-	gradient = false;
+	gradient = true;
 	showLegend = true;
 	showXAxisLabel = false;
 	xAxisLabel = '';
@@ -25,10 +25,15 @@ export class WorkForceTodayComponent implements OnInit {
 	yAxisLabel = 'Invoice Count';
 
 	colorScheme = {
-		domain: [
-			'#A133D5', '#DD3F5C', '#1ABB9C'
-		]
+		// domain: [
+		// 	'#A133D5', '#DD3F5C', '#1ABB9C'
+		// ]
+		domain: ['#aae3f5', '#7aa3e5', '#a8385d']
 	};
+
+	ytdbandColor = '#aae3f5';
+	mtdbandColor = '#7aa3e5';
+	todaybandColor = '#a27ea8';
 
 	onSelect(event) {
 		console.log(event);

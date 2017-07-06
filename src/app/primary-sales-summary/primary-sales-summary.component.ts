@@ -14,12 +14,14 @@ export class PrimarySalesSummaryComponent implements OnInit {
 	single3: any[];
 	multi: any[];
 
-	view: any[] = [150, 150];
+	view: any[] = [330, 150];
 
-	bandColor = 'red';
+	single1bandColor = '#aae3f5';
+	single2bandColor = '#7aa3e5';
+	single3bandColor = '#a27ea8';
 
 	colorScheme = {
-		domain: ['#5AA454', '#A10A28', '#C7B42C']
+		domain: ['#232837', '#7aa3e5', '#232837']
 	};
 
 	constructor(
@@ -46,39 +48,39 @@ export class PrimarySalesSummaryComponent implements OnInit {
 			response['results'].forEach(element => {
 				if (element['YearToDatePrimarySales'] == null) {
 					let ytdObject = {
-						'name': 'Year To Date',
+						'name': 'Primary Sales YTD',
 						'value': 0
 					};
 					tempYTD.push(ytdObject);
 				} else {
 					let ytdObject = {
-						'name': 'Year To Date',
+						'name': 'Primary Sales YTD',
 						'value': element['YearToDatePrimarySales']
 					};
 					tempYTD.push(ytdObject);
 				}
 				if (element['MonthToDatePrimarySales'] == null) {
 					let mtdObject = {
-						'name': 'Month To Date',
+						'name': 'Primary Sales MTD',
 						'value': 0
 					};
 					tempMTD.push(mtdObject);
 				} else {
 					let mtdObject = {
-						'name': 'Month To Date',
+						'name': 'Primary Sales YTD',
 						'value': element['MonthToDatePrimarySales']
 					};
 					tempMTD.push(mtdObject);
 				}
 				if (element['TodayPrimarySales'] == null) {
 					let todaydObject = {
-						'name': 'To Date',
+						'name': 'Primary Sales To Date',
 						'value': 0
 					};
 					tempTD.push(todaydObject);
 				} else {
 					let todaydObject = {
-						'name': 'To Date',
+						'name': 'Primary Sales To Date',
 						'value': element['TodayPrimarySales']
 					};
 					tempTD.push(todaydObject);
