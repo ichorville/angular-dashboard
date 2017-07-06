@@ -17,7 +17,27 @@ export class ReturnsByReasonComponent implements OnInit {
 	showLegend = true;
 
 	colorScheme = {
-		domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
+		domain: [
+			'#546E7A',
+			'#757575', 
+			'#6D4C41',
+			'#F4511E', 
+			'#FB8C00', 
+			'#FFB300',
+			'#FDD835', 
+			'#C0CA33', 
+			'#7CB342', 
+			'#43A047',
+			'#00897B', 
+			'#00ACC1', 
+			'#039BE5',
+			'#1E88E5', 
+			'#3949AB', 
+			'#5E35B1', 
+			'#8E24AA',
+			'#D81B60', 
+			'#e53935'
+		]
 	};
 
 	// pie
