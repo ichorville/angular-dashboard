@@ -20,8 +20,8 @@ export class ReturnsByReasonService {
         this.options = new RequestOptions({ headers: this.headers });
     }
 
-    get(): Promise<any> {
-        return this.http.get(`${ this.url }startDate=2017-06-02&endDate=2017-06-30`, this.options).toPromise().then((response) => {
+    get(startDate: any, endDate: any): Promise<any> {
+        return this.http.get(`${ this.url }startDate=${ startDate }&endDate=${ endDate }`, this.options).toPromise().then((response) => {
             return response.json();
         });
     }

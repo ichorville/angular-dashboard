@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { PrimarySalesSummaryService } from './primary-sales-summary.service';
 
@@ -8,7 +8,7 @@ import { PrimarySalesSummaryService } from './primary-sales-summary.service';
 	styleUrls: ['./primary-sales-summary.component.css']
 })
 export class PrimarySalesSummaryComponent implements OnInit {
-
+	
 	single1: any[];
 	single2: any[];
 	single3: any[];

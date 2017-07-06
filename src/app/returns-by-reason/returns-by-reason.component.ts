@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { ReturnsByReasonService } from './returns-by-reason.service';
 
@@ -8,6 +8,12 @@ import { ReturnsByReasonService } from './returns-by-reason.service';
 	styleUrls: ['./returns-by-reason.component.css']
 })
 export class ReturnsByReasonComponent implements OnInit {
+
+	@Input()
+	startDate: string;
+	@Input()
+	endDate: string;
+
 	single: any[];
 	multi: any[];
 
@@ -56,7 +62,7 @@ export class ReturnsByReasonComponent implements OnInit {
 	}
 
 	ngOnInit() {
-		this._rbr.get().then((response) => {
+		this._rbr.get(this.startDate, this.endDate).then((response) => {
 			if (!response) {
 				return '404';
 			}
