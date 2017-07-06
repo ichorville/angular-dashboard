@@ -1,0 +1,40 @@
+md-card {
+    margin-top: 25%;
+    padding-bottom: 70px;
+}
+img {
+    width: 200px;
+    margin-bottom: -32px;
+    margin-top: -15px;
+}
+.full-width {
+    width: 100%;
+}
+.center {
+	text-align: center;
+}
+.btn-signup {
+    border-radius: 5px;
+    border: 1px solid white;
+    margin-top: 15px;
+    border-color: #1B1C1D;
+    width: 100%;
+}
+.btn-signup:hover {
+    background-color: #1B1C1D;
+    color: white;
+    border-color: white;
+}
+a {
+	text-decoration: none;
+}
+:host/deep/.mat-input-underline .mat-input-ripple {
+    background-color: #1B1C1D !important;
+}
+:host/deep/.mat-focused .mat-input-placeholder {
+    color: #1B1C1D;
+}
+.row {
+    margin-left: 0px; 
+    margin-right: 0px; 
+}

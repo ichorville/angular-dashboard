@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"></div>
+    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <md-card>
+            <form [formGroup]="form" (ngSubmit)="onSubmit($event)">
+                <div class="row">
+                    <div class="col-xs-12 center">
+                        <img src="../../assets/images/logo.png" alt="Vantage">
+                    </div> 
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <md-input-container for="email" class="full-width">
+                            <input mdInput placeholder="Username"  id="email" 
+                            formControlName="email" [(ngModel)]="user.email">
+							<md-error *ngIf="formErrors.email">
+								{{ formErrors.email }}
+							</md-error>
+                        </md-input-container>
+                    </div>  
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <md-input-container for="password" class="full-width">
+                            <input mdInput [type]="'password'" placeholder="Password" id="password" 
+                            formControlName="password" [(ngModel)]="user.password">
+                            <md-error>
+								{{ formErrors.password }}
+							</md-error>
+                        </md-input-container>
+                    </div>  
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <button type="submit" class="full-width btn-login" md-raised-button>Login</button>
+                    </div> 
+                </div>
+            </form>
+        </md-card>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"></div>
+</div>
