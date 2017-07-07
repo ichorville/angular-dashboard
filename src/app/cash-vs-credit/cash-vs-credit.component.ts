@@ -26,6 +26,7 @@ export class CashVsCreditComponent implements OnInit {
 	showXAxisLabel: boolean;
 	showYAxisLabel: boolean;
 	title: string;
+	type: string;
 	view: any[];
 	xAxisLabel: string;
 	yAxisLabel: string;
@@ -56,6 +57,7 @@ export class CashVsCreditComponent implements OnInit {
 		this.view = [300, 200];
 		this.xAxisLabel = 'Credit term';
 		this.yAxisLabel = 'Sales value';
+		this.type = 'bar-horizontal-2d';
 	}
 
 	ngOnInit() {
@@ -111,7 +113,7 @@ export class CashVsCreditComponent implements OnInit {
 			'yAxisLabel': this.yAxisLabel,
 			'barPadding': this.barPadding,
 			'background': this.background,
-			'type': 'bar-horizontal-2d'
+			'type': this.type
 		};
 	}
 

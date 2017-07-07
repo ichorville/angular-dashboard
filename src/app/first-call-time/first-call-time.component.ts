@@ -14,11 +14,6 @@ export class FirstCallTimeComponent implements OnInit {
 	@Input()
 	endDate: string;
 
-	// single: any[];
-
-	// view: any[] = [300, 200];
-
-	// options
 	background: string;
 	barPadding: number;
 	colorScheme: any;
@@ -31,45 +26,11 @@ export class FirstCallTimeComponent implements OnInit {
 	showXAxisLabel: boolean;
 	showYAxisLabel: boolean;
 	title: string;
+	type: string;
 	view: any[];
 	xAxisLabel: string;
 	yAxisLabel: string;
-	
-	// showXAxis = true;
-	// showYAxis = true;
-	// gradient = false;
-	// showLegend = true;
-	// showXAxisLabel = true;
-	// xAxisLabel = 'Country';
-	// showYAxisLabel = true;
-	// yAxisLabel = 'Call Count';
-	// barPadding = 15;
-
-	// colorScheme = {
-	// 	domain: [
-	// 		'#e53935', 
-	// 		'#D81B60', 
-	// 		'#8E24AA',
-	// 		'#5E35B1', 
-	// 		'#3949AB', 
-	// 		'#1E88E5', 
-	// 		'#039BE5', 
-	// 		'#00ACC1', 
-	// 		'#00897B', 
-	// 		'#43A047', 
-	// 		'#7CB342', 
-	// 		'#C0CA33', 
-	// 		'#FDD835', 
-	// 		'#FFB300', 
-	// 		'#FB8C00', 
-	// 		'#F4511E', 
-	// 		'#6D4C41', 
-	// 		'#757575', 
-	// 		'#546E7A'
-	// 	]
-	// };
-
-	// line, area
+	// check later
 	autoScale = true;
 
 	constructor(
@@ -93,13 +54,10 @@ export class FirstCallTimeComponent implements OnInit {
 		this.showYAxisLabel = true;
 		this.title = 'First Time Call Summary';
 		this.view = [300, 200];
-		// this.xAxisLabel = 'Credit term';
-		// this.yAxisLabel = 'Sales value';
+		this.xAxisLabel = '';
+		this.yAxisLabel = '';
+		this.type = 'bar-horizontal';
 	
-	}
-
-	onSelect(event) {
-		console.log(event);
 	}
 
 	ngOnInit() {
@@ -136,7 +94,7 @@ export class FirstCallTimeComponent implements OnInit {
 			'yAxisLabel': this.yAxisLabel,
 			'barPadding': this.barPadding,
 			'background': this.background,
-			'type': 'bar-horizontal'
+			'type': this.type
 		};
 	}
 }

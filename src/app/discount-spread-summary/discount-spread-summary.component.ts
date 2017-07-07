@@ -26,6 +26,7 @@ export class DiscountSpreadSummaryComponent implements OnInit {
 	showXAxisLabel: boolean;
 	showYAxisLabel: boolean;
 	title: string;
+	type: string;
 	view: any[];
 	xAxisLabel: string;
 	yAxisLabel: string;
@@ -52,6 +53,7 @@ export class DiscountSpreadSummaryComponent implements OnInit {
 		this.view = [300, 200];
 		this.xAxisLabel = '';
 		this.yAxisLabel = '';
+		this.type = 'bar-horizontal';
 	}
 
 	ngOnInit() {
@@ -88,7 +90,7 @@ export class DiscountSpreadSummaryComponent implements OnInit {
 			'yAxisLabel': this.yAxisLabel,
 			'barPadding': this.barPadding,
 			'background': this.background,
-			'type': 'bar-horizontal'
+			'type': this.type
 		};
 	}
 }

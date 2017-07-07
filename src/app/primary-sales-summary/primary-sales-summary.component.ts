@@ -34,10 +34,6 @@ export class PrimarySalesSummaryComponent implements OnInit {
 		
 	}
 
-	onSelect(event) {
-		console.log(event);
-	}
-
 	ngOnInit() {
 		this._pss.get().then((response) => {
 			if (response.status == 500) {

@@ -21,6 +21,7 @@ export class ReturnsByReasonComponent implements OnInit {
 	explodeSlices: boolean;
 	results: any[];
 	title: string;
+	type: string;
 	showLabels: boolean;
 	view: any[];
 
@@ -41,6 +42,7 @@ export class ReturnsByReasonComponent implements OnInit {
 		this.results = [];
 		this.title = 'Return by Reason'
 		this.view = [300, 200];
+		this.type = 'pie-chart';
 	}
 
 	ngOnInit() {
@@ -71,7 +73,7 @@ export class ReturnsByReasonComponent implements OnInit {
 			'showLabels': this.showLabels,
 			'doughnut': this.doughnut,
 			'background': this.background,
-			'type': 'pie-chart'
+			'type': this.type
 		};
 	}
 }
