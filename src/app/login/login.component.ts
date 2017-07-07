@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
 
 	buildForm(): void {
 		this.form = this.fb.group({
-			'email': [this.user.email, [Validators.required]],
+			'username': [this.user.username, [Validators.required]],
 			'password': [this.user.password, [Validators.required]],
 		});
 		this.form.valueChanges.subscribe(data => this.onValueChanged(data));
@@ -33,13 +33,13 @@ export class LoginComponent implements OnInit {
 	}
 
 	formErrors = {
-		'email': '',
+		'username': '',
 		'password': ''
 	};
 
 	validationMessages = {
 		'email': {
-			'required': 'Email is required.',
+			'required': 'Username is required.',
 		},
 		'password': {
 			'required': 'Password is required.'
@@ -69,7 +69,7 @@ export class LoginComponent implements OnInit {
 	onSubmit(event) {
 		if (this.form.valid) {
 			let user: any = {
-				'email': this.user.email,
+				'email': this.user.username,
 				'password': this.user.password
 			}
 			
@@ -87,6 +87,6 @@ export class LoginComponent implements OnInit {
 }
 
 export class User {
-    email: string;
+    username: string;
     password: string;
 }

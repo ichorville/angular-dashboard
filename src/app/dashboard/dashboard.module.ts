@@ -16,9 +16,10 @@ import { DiscountsVsSalesModule } from '../discounts-vs-sales/discounts-vs-sales
 import { FirstCallTimeModule } from '../first-call-time/first-call-time.module';
 import { ReturnsByReasonModule } from '../returns-by-reason/returns-by-reason.module';
 import { PrimarySalesSummaryModule } from '../primary-sales-summary/primary-sales-summary.module';
-import {SecondarySalesSummaryModule} from '../secondary-sales-summary/secondary-sales-summary.module';
+import { SecondarySalesSummaryModule } from '../secondary-sales-summary/secondary-sales-summary.module';
 import { CashVsCreditModule } from '../cash-vs-credit/cash-vs-credit.module';
 
+import { ChartCardModule } from '../shared/chart-card/chart-card.module';
 
 import { DashboardComponent } from './dashboard.component';
 import { routing } from './dashboard.routing';
@@ -43,6 +44,7 @@ import { routing } from './dashboard.routing';
 		PrimarySalesSummaryModule,
 		SecondarySalesSummaryModule,
 		CashVsCreditModule,
+		ChartCardModule,
 		routing
 	],
 	declarations: [

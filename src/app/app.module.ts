@@ -11,6 +11,8 @@ import { LoginModule } from './login/login.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { CreditTermSpreadSummaryModule } from './credit-term-spread-summary/credit-term-spread-summary.module';
 
+import { ChartCardModule } from './shared/chart-card/chart-card.module';
+
 import { AppComponent } from './app.component';
 import { routing } from './app.routing';
 
@@ -28,6 +30,7 @@ import { routing } from './app.routing';
 		LoginModule,
 		DashboardModule,
 		CreditTermSpreadSummaryModule,
+		ChartCardModule,
 		routing
 	],
 	providers: [],

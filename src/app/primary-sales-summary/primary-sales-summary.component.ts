@@ -8,6 +8,8 @@ import { PrimarySalesSummaryService } from './primary-sales-summary.service';
 	styleUrls: ['./primary-sales-summary.component.css']
 })
 export class PrimarySalesSummaryComponent implements OnInit {
+
+	text: string;
 	
 	single1: any[];
 	single2: any[];
@@ -30,6 +32,7 @@ export class PrimarySalesSummaryComponent implements OnInit {
 		this.single1 = [];
 		this.single2 = [];
 		this.single3 = [];
+		this.text = this.text;
 	}
 
 	onSelect(event) {
@@ -38,13 +41,15 @@ export class PrimarySalesSummaryComponent implements OnInit {
 
 	ngOnInit() {
 		this._pss.get().then((response) => {
+			console.log(response);
 			if (response.status == 500) {
 				return '404';
 			}
 			let tempYTD: any[] = [];
 			let tempMTD: any[] = [];
 			let tempTD: any[] = [];
-
+			this.text = response['results'][0]['YearToDatePrimarySales'];
+			// console.log(response['results'][0]['YearToDatePrimarySales']);
 			response['results'].forEach(element => {
 				if (element['YearToDatePrimarySales'] == null) {
 					let ytdObject = {

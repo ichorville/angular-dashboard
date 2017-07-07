@@ -1,5 +1,5 @@
 <div class="col-md-4">
-	<md-card>
+	<!--<md-card>
 		<ngx-charts-number-card
 			[view]="view"
 			[results]="single1"
@@ -7,7 +7,21 @@
 			[bandColor]="single1bandColor"
 			(select)="onSelect($event)">
 		</ngx-charts-number-card>
-	</md-card>
+	</md-card>-->
+	<div class="card card-stats">
+		<div class="card-header" data-background-color="orange">
+			<i class="material-icons">content_copy</i>
+		</div>
+		<div class="card-content">
+			<p class="category">Primary Sales YTD</p>
+			<h3 class="title">{{ text }}</h3>
+		</div>
+		<div class="card-footer">
+			<div class="stats">
+				<i class="material-icons text-danger">warning</i> <a href="#pablo">Get More Space...</a>
+			</div>
+		</div>
+	</div>
 </div>
 <div class="col-md-4">
 	<md-card>
