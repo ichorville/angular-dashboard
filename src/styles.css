@@ -2,7 +2,7 @@
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
 body{
-    font-family: 'RobotoDraft', 'Roboto', 'Helvetica Neue, Helvetica, Arial', sans-serif;
+    font-family: 'RobotoDraft', 'Roboto', sans-serif !important;
     font-style: normal;
     font-weight: 300;
     font-size: 1.4rem;
