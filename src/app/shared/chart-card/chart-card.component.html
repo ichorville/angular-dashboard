@@ -12,6 +12,18 @@
 				[xAxisLabel]="chartElement.xAxisLabel"
 				[yAxisLabel]="chartElement.yAxisLabel">
 			</ngx-charts-bar-horizontal>
+			<ngx-charts-bar-vertical *ngSwitchCase="'bar-vertical'"
+				[view]="chartElement.view"
+				[scheme]="chartElement.scheme"
+				[results]="chartElement.results"
+				[gradient]="chartElement.gradient"
+				[xAxis]="chartElement.showXAxis"
+				[yAxis]="chartElement.showYAxis"
+				[barPadding]="chartElement.barPadding"
+				[showYAxisLabel]="chartElement.showYAxisLabel"
+				[xAxisLabel]="chartElement.xAxisLabel"
+				[yAxisLabel]="chartElement.yAxisLabel">
+			</ngx-charts-bar-vertical>
 			<ngx-charts-bar-horizontal-2d *ngSwitchCase="'bar-horizontal-2d'"
 				[view]="chartElement.view"
 				[scheme]="chartElement.scheme"
@@ -33,6 +45,14 @@
 				[xAxisLabel]="chartElement.xAxisLabel"
 				[yAxisLabel]="chartElement.yAxisLabel">
 			</ngx-charts-bar-vertical-2d>
+			<ngx-charts-pie-chart *ngSwitchCase="'pie-chart'"
+				[view]="chartElement.view"
+				[scheme]="chartElement.scheme"
+				[results]="chartElement.results"
+				[explodeSlices]="chartElement.explodeSlices"
+				[labels]="chartElement.showLabels"
+				[doughnut]="chartElement.doughnut">
+			</ngx-charts-pie-chart>
 		</div>
 	</div>
 	<div class="card-content">

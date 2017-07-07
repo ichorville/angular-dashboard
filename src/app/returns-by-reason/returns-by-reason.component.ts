@@ -14,51 +14,32 @@ export class ReturnsByReasonComponent implements OnInit {
 	@Input()
 	endDate: string;
 
-	single: any[];
-	multi: any[];
-
-	view: any[] = [350, 200];
-
-	// options
-	showLegend = true;
-
-	colorScheme = {
-		domain: [
-			'#546E7A',
-			'#757575', 
-			'#6D4C41',
-			'#F4511E', 
-			'#FB8C00', 
-			'#FFB300',
-			'#FDD835', 
-			'#C0CA33', 
-			'#7CB342', 
-			'#43A047',
-			'#00897B', 
-			'#00ACC1', 
-			'#039BE5',
-			'#1E88E5', 
-			'#3949AB', 
-			'#5E35B1', 
-			'#8E24AA',
-			'#D81B60', 
-			'#e53935'
-		]
-	};
-
-	// pie
-	showLabels = true;
-	explodeSlices = false;
-	doughnut = true;
+	background: string;
+	colorScheme: any;
+	chartElement: any;
+	doughnut: boolean;
+	explodeSlices: boolean;
+	results: any[];
+	title: string;
+	showLabels: boolean;
+	view: any[];
 
 	constructor(
 		private _rbr: ReturnsByReasonService
 	) {
-		this.single=[];
-	}
-
-	onSelect(event) {
-		console.log(event);
+		this.background = 'green';
+		this.colorScheme = {
+			domain: [
+				'#FFFFFF'
+			]
+		};
+		this.chartElement = {};
+		this.showLabels = true;
+		this.doughnut = true;
+		this.explodeSlices = false;
+		this.results = [];
+		this.title = 'Return by Reason'
+		this.view = [300, 200];
 	}
 
 	ngOnInit() {
@@ -74,7 +55,22 @@ export class ReturnsByReasonComponent implements OnInit {
 				};
 				temp.push(object);
 			});
-			this.single = temp;
+			this.results = temp;
+
+			this.createChart();
 		});
+	}
+
+	private createChart() {
+		this.chartElement = {
+			'scheme': this.colorScheme,
+			'view': this.view,
+			'results': this.results,
+			'explodeSlices': this.explodeSlices,
+			'showLabels': this.showLabels,
+			'doughnut': this.doughnut,
+			'background': this.background,
+			'type': 'pie-chart'
+		};
 	}
 }
