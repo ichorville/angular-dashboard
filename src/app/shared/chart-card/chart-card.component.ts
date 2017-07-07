@@ -1,39 +1,30 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, AfterViewInit } from '@angular/core';
 
 @Component({
 	selector: 'app-chart-card',
 	templateUrl: './chart-card.component.html',
 	styleUrls: ['./chart-card.component.css']
 })
-export class ChartCardComponent implements OnInit {
+export class ChartCardComponent implements OnInit, AfterViewInit {
 
 	@Input()
 	title: string;
+	
 	@Input()
-	single: any[];
+	chartElement: any[];
 
-	// @Input()
-	// view: any[];
+	constructor() {
 
-	constructor() { }
+	}
 
 	ngOnInit() {
-		// console.log(this.view);
+		//document.getElementById('chartElement').parentElement.setAttribute('data-background-color', this.chartElement['background']);
 	}
-	
-	view: any[] = [300, 200];
 
-	// options
-	showXAxis = true;
-	showYAxis = true;
-	gradient = false;
-	showLegend = true;
-	showXAxisLabel = true;
-	xAxisLabel = 'Credit term';
-	showYAxisLabel = true;
-	yAxisLabel = 'Sales value';
-	barPadding = 15;
-	
+	ngAfterViewInit() {
+		document.getElementById('chartElement').parentElement.setAttribute('data-background-color', this.chartElement['background']);
+	}
+
 	colorScheme = {
 		domain: [
 			// '#e53935', 
@@ -58,9 +49,5 @@ export class ChartCardComponent implements OnInit {
 			'#FFFFFF'
 		]
 	};
-
-	onSelect(event) {
-		console.log(event);
-	}
 
 }

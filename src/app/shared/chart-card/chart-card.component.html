@@ -1,22 +1,21 @@
-<div class="card">
-	<div class="card-header card-chart" >
-		<div class="ct-chart" id="dailySalesChart">
-			<ngx-charts-bar-horizontal
-				[view]="view"
+<div class="card" [ngSwitch]="chartElement.type">
+	<div class="card-header card-chart" data-background-color="chartElement.background">
+		<div class="ct-chart" id="chartElement">
+			<ngx-charts-bar-horizontal *ngSwitchCase="'bar-horizontal'"
+				[view]="chartElement.view"
 				[scheme]="colorScheme"
-				[results]="single"
-				[gradient]="gradient"
-				[xAxis]="showXAxis"
-				[yAxis]="showYAxis"
-				[barPadding]="barPadding"
-				[xAxisLabel]="xAxisLabel"
-				[yAxisLabel]="yAxisLabel"
-				(select)="onSelect($event)">
+				[results]="chartElement.results"
+				[gradient]="chartElement.gradient"
+				[xAxis]="chartElement.showXAxis"
+				[yAxis]="chartElement.showYAxis"
+				[barPadding]="chartElement.barPadding"
+				[xAxisLabel]="chartElement.xAxisLabel"
+				[yAxisLabel]="chartElement.yAxisLabel">
 			</ngx-charts-bar-horizontal>
 		</div>
 	</div>
 	<div class="card-content">
-		<h3>{{ title }}</h3>
+		<h2>{{ title }}</h2>
 		<p class="category"><span class="text-success"><i class="fa fa-long-arrow-up"></i> 55%  </span> increase in today sales.</p>
 	</div>
 	<div class="card-footer">

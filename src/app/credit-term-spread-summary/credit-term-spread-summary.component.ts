@@ -11,25 +11,24 @@ export class CreditTermSpreadSummaryComponent implements OnInit {
 
 	@Input()
 	startDate: string;
+
 	@Input()
 	endDate: string;
 
+	background: string;
+	barPadding: number;
+	chartElement: any;
+	gradient: boolean;
+	results: any[];
+	showXAxis: boolean;
+	showYAxis: boolean;
+	showLegend: boolean;
+	showXAxisLabel: boolean;
+	showYAxisLabel: boolean;
 	title: string;
-
-	single: any[];
-
-	view: any[] = [300, 200];
-
-	// options
-	showXAxis = true;
-	showYAxis = true;
-	gradient = false;
-	showLegend = true;
-	showXAxisLabel = true;
-	xAxisLabel = 'Credit term';
-	showYAxisLabel = true;
-	yAxisLabel = 'Sales value';
-	barPadding = 15;
+	view: any[];
+	xAxisLabel: string;
+	yAxisLabel: string;
 	
 	colorScheme = {
 		domain: [
@@ -63,8 +62,20 @@ export class CreditTermSpreadSummaryComponent implements OnInit {
 	constructor( 
 		private _css: CreditTermSpreadSummaryService
 	) {
-		this.title = 'Daily Sales'
-		this.single = [];
+		this.background = 'green';
+		this.barPadding = 15;
+		this.chartElement = {};
+		this.gradient = false;
+		this.results = [];
+		this.showXAxis = true;
+		this.showYAxis = true;
+		this.showLegend = true;
+		this.showXAxisLabel = true;
+		this.showYAxisLabel = true;
+		this.title = 'Daily Sales';
+		this.view = [300, 200];
+		this.xAxisLabel = 'Credit term';
+		this.yAxisLabel = 'Sales value';
 	}
 
 	ngOnInit() {
@@ -80,7 +91,27 @@ export class CreditTermSpreadSummaryComponent implements OnInit {
 				};
 				temp.push(object);
 			});
-			this.single = temp;
+			this.results = temp;
+
+			this.createChart();
 		});
+	}
+
+	private createChart() {
+		this.chartElement = {
+			'view': this.view,
+			'results': this.results,
+			'showXAxis': this.showXAxis,
+			'showYAxis': this.showYAxis,
+			'gradient': this.gradient,
+			'showLegend': this.showLegend,
+			'showXAxisLabel': this.showXAxisLabel,
+			'xAxisLabel': this.xAxisLabel,
+			'showYAxisLabel': this.showYAxisLabel,
+			'yAxisLabel': this.yAxisLabel,
+			'barPadding': this.barPadding,
+			'background': this.background,
+			'type': 'bar-horizontal'
+		};
 	}
 }

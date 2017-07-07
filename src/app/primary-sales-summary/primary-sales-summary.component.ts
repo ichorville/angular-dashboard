@@ -41,7 +41,6 @@ export class PrimarySalesSummaryComponent implements OnInit {
 
 	ngOnInit() {
 		this._pss.get().then((response) => {
-			console.log(response);
 			if (response.status == 500) {
 				return '404';
 			}

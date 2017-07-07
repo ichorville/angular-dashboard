@@ -61,7 +61,6 @@
   margin: -20px 15px 0;
   border-radius: 3px;
   padding: 15px;
-  background: linear-gradient(60deg, #66bb6a, #43a047);
 }
 
 .card .card-header .title {
@@ -172,31 +171,6 @@
   margin-right: 5px;
 }
 
-.card .author .avatar {
-  width: 30px;
-  height: 30px;
-  overflow: hidden;
-  border-radius: 50%;
-  margin-right: 5px;
-}
-
-.card .author a {
-  color: #3C4858;
-  text-decoration: none;
-}
-
-.card .author a .ripple-container {
-  display: none;
-}
-
-.card .table {
-  margin-bottom: 0;
-}
-
-.card .table tr:first-child td {
-  border-top: none;
-}
-
 .card [data-background-color="purple"] {
   background: linear-gradient(60deg, #ab47bc, #8e24aa);
   box-shadow: 0 12px 20px -10px rgba(156, 39, 176, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(156, 39, 176, 0.2);
@@ -300,39 +274,6 @@
   border: 0;
   box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.42), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
 }
-
-.card-profile,
-.card-testimonial {
-  margin-top: 30px;
-  text-align: center;
-}
-
-.card-profile .btn-just-icon.btn-raised,
-.card-testimonial .btn-just-icon.btn-raised {
-  margin-left: 6px;
-  margin-right: 6px;
-}
-
-.card-profile .card-avatar,
-.card-testimonial .card-avatar {
-  max-width: 130px;
-  max-height: 130px;
-  margin: -50px auto 0;
-  border-radius: 50%;
-  overflow: hidden;
-  box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.42), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
-}
-
-.card-profile .card-avatar+.content,
-.card-testimonial .card-avatar+.content {
-  margin-top: 15px;
-}
-
-.card-profile.card-plain .card-avatar,
-.card-testimonial.card-plain .card-avatar {
-  margin-top: 0;
-}
-
 :host/deep/.ngx-charts text {
     fill: #FFFFFF !important;
 }
