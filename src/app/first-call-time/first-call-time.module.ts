@@ -6,6 +6,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { ChartCardModule } from '../shared/chart-card/chart-card.module';
 
 import { FirstCallTimeComponent } from './first-call-time.component';
 import { FirstCallTimeService } from './first-call-time.service';
@@ -18,7 +19,8 @@ import { FirstCallTimeService } from './first-call-time.service';
 		ReactiveFormsModule,
 		HttpModule,
 		MaterialModule,
-		NgxChartsModule
+		NgxChartsModule,
+		ChartCardModule
 	],
 	declarations: [
 		FirstCallTimeComponent

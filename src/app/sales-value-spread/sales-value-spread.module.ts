@@ -6,6 +6,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { ChartCardModule } from '../shared/chart-card/chart-card.module';
 
 import { SalesValueSpreadComponent } from './sales-value-spread.component';
 import { SalesValueSpreadService } from './sales-value-spread.service';
@@ -18,7 +19,8 @@ import { SalesValueSpreadService } from './sales-value-spread.service';
 		ReactiveFormsModule,
 		HttpModule,
 		MaterialModule,
-		NgxChartsModule
+		NgxChartsModule,
+		ChartCardModule
 	],
 	declarations: [
 		SalesValueSpreadComponent

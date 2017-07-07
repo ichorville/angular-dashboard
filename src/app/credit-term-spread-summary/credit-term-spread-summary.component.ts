@@ -49,7 +49,7 @@ export class CreditTermSpreadSummaryComponent implements OnInit {
 		this.showLegend = true;
 		this.showXAxisLabel = true;
 		this.showYAxisLabel = true;
-		this.title = 'Daily Sales';
+		this.title = 'Credit Term Spread Summary';
 		this.view = [300, 200];
 		this.xAxisLabel = 'Credit term';
 		this.yAxisLabel = 'Sales value';
