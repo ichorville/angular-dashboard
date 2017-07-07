@@ -6,6 +6,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { ChartCardModule } from '../shared/chart-card/chart-card.module';
 
 import { WorkForceTodayComponent } from './work-force-today.component';
 import { WorkForceTodayService } from './work-force-today.service';
@@ -18,7 +19,8 @@ import { WorkForceTodayService } from './work-force-today.service';
 		ReactiveFormsModule,
 		HttpModule,
 		MaterialModule,
-		NgxChartsModule
+		NgxChartsModule,
+		ChartCardModule
 	],
 	declarations: [
 		WorkForceTodayComponent
