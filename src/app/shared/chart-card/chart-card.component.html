@@ -1,6 +1,6 @@
 <div class="card" [ngSwitch]="chartElement.type">
 	<div class="card-header card-chart" [attr.data-background-color]="chartElement.background">
-		<div class="ct-chart" id="chartElement">
+		<div class="ct-chart">
 			<ngx-charts-bar-horizontal *ngSwitchCase="'bar-horizontal'"
 				[view]="chartElement.view"
 				[scheme]="chartElement.scheme"

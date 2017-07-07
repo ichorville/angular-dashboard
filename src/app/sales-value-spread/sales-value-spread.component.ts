@@ -8,6 +8,7 @@ import { SalesValueSpreadService } from './sales-value-spread.service';
   styleUrls: ['./sales-value-spread.component.css']
 })
 export class SalesValueSpreadComponent implements OnInit {
+
 	@Input()
 	startDate: string;
 	@Input()
@@ -15,10 +16,6 @@ export class SalesValueSpreadComponent implements OnInit {
 
 	single: any[];
 	multi: any[];
-
-	
-
-	 // options
 
 	background: string;
 	barPadding: number;
@@ -32,50 +29,14 @@ export class SalesValueSpreadComponent implements OnInit {
 	showXAxisLabel: boolean;
 	showYAxisLabel: boolean;
 	title: string;
+	type: string;
 	view: any[];
 	xAxisLabel: string;
 	yAxisLabel: string;
-	// showXAxis = true;
-	// showYAxis = true;
-	// gradient = true;
-	// showLegend = true;
-	// showXAxisLabel = false;
-	// xAxisLabel = '';
-	// showYAxisLabel = false;
-	// yAxisLabel = 'invoice count';
 	
-	// colorScheme = {
-	// 	domain: [
-	// 		// '#e53935', 
-	// 		// '#D81B60', 
-	// 		// '#8E24AA',
-	// 		// '#5E35B1', 
-	// 		// '#3949AB', 
-	// 		// '#1E88E5', 
-	// 		'#546E7A',
-	// 		'#757575', 
-	// 		'#6D4C41',
-	// 		'#F4511E', 
-	// 		'#FB8C00', 
-	// 		'#FFB300',
-	// 		'#FDD835', 
-	// 		'#C0CA33', 
-	// 		'#7CB342', 
-	// 		'#43A047',
-	// 		'#00897B', 
-	// 		'#00ACC1', 
-	// 		'#039BE5'
-	// 	]
-	// };
-
-	onSelect(event) {
-		console.log(event);
-	}
-
 	constructor(
 		private _svs: SalesValueSpreadService
 	) {
-		this.single = [];
 		this.background = 'orange';
 		this.barPadding = 15;
 		this.colorScheme = {
@@ -93,6 +54,7 @@ export class SalesValueSpreadComponent implements OnInit {
 		this.showYAxisLabel = true;
 		this.title = 'Sales Value Spread Summary';
 		this.view = [300, 200];
+		this.type = 'bar-horizontal';
 		this.xAxisLabel = 'Credit term';
 		this.yAxisLabel = 'Sales value';
 	}
@@ -110,7 +72,6 @@ export class SalesValueSpreadComponent implements OnInit {
 				};
 				temp.push(object);
 			});
-			//this.single = temp;
 			this.results = temp;
 
 			this.createChart();
@@ -132,7 +93,7 @@ export class SalesValueSpreadComponent implements OnInit {
 			'yAxisLabel': this.yAxisLabel,
 			'barPadding': this.barPadding,
 			'background': this.background,
-			'type': 'bar-horizontal'
+			'type': this.type
 		};
 	}
 }
