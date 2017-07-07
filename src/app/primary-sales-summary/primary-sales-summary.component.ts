@@ -53,15 +53,16 @@ export class PrimarySalesSummaryComponent implements OnInit {
 				};
 				this.single1 = response['results'][0]['YearToDatePrimarySales'];
 			
-				if (response['results'][1]['MonthToDatePrimarySales'] == null) {
-					response['results'][1]['MonthToDatePrimarySales'] =0;
+				if (response['results'][0]['MonthToDatePrimarySales'] == null) {
+					response['results'][0]['MonthToDatePrimarySales'] =0;
 				};
-				this.single1 = response['results'][1]['MonthToDatePrimarySales'];
+				this.single2 = response['results'][0]['MonthToDatePrimarySales'];
 
-				if (response['results'][2]['MonthToDatePrimarySales'] == null) {
-					response['results'][2]['MonthToDatePrimarySales'] =0;
+				if (response['results'][0]['TodayPrimarySales'] == null) {
+					response['results'][0]['TodayPrimarySales'] =0;
 				};
-				this.single1 = response['results'][2]['TodayPrimarySales'];
+				this.single3 = response['results'][0]['TodayPrimarySales'];
+
 			// console.log(response['results'][0]['YearToDatePrimarySales']);
 			// response['results'].forEach(element => {
 			// 	if (element['YearToDatePrimarySales'] == null) {
