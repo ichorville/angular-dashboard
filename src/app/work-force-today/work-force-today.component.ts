@@ -79,7 +79,7 @@ export class WorkForceTodayComponent implements OnInit {
 		private _wfs: WorkForceTodayService
 	) {
 		this.single = [];
-		this.background = 'green';
+		this.background = 'purple';
 		this.barPadding = 15;
 		this.colorScheme = {
 			domain: [

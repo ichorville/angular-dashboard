@@ -30,7 +30,8 @@ export class ReturnsByReasonComponent implements OnInit {
 		this.background = 'green';
 		this.colorScheme = {
 			domain: [
-				'#FFFFFF'
+				'#FFFFFF',
+				'#FDD835'
 			]
 		};
 		this.chartElement = {};

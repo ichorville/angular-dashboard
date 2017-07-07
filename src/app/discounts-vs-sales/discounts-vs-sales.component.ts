@@ -33,7 +33,7 @@ export class DiscountsVsSalesComponent implements OnInit {
 	constructor(
 		private _dvs: DiscountVsSalesService
 	) {
-		this.background = 'green';
+		this.background = 'blue';
 		this.barPadding = 15;
 		this.colorScheme = {
 			domain: [

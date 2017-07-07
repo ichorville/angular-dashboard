@@ -33,7 +33,7 @@ export class DiscountSpreadSummaryComponent implements OnInit {
 	constructor(
 		private _dsss: DiscountSpreadSummaryService
 	) {
-		this.background = 'green';
+		this.background = 'blue';
 		this.barPadding = 15;
 		this.colorScheme = {
 			domain: [

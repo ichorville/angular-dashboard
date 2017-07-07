@@ -76,7 +76,7 @@ export class SalesValueSpreadComponent implements OnInit {
 		private _svs: SalesValueSpreadService
 	) {
 		this.single = [];
-		this.background = 'green';
+		this.background = 'orange';
 		this.barPadding = 15;
 		this.colorScheme = {
 			domain: [

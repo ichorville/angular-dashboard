@@ -33,7 +33,7 @@ export class SalesSkuSpreadSummaryComponent implements OnInit {
 	constructor(
 		private _ssp: SalesSkuSpreadSummaryService
 	) {
-		this.background = 'green';
+		this.background = 'red';
 		this.barPadding = 15;
 		this.colorScheme = {
 			domain: [

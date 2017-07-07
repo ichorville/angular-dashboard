@@ -76,7 +76,7 @@ export class FirstCallTimeComponent implements OnInit {
 		private _fct: FirstCallTimeService
 	) {
 		//this.single = [];
-		this.background = 'green';
+		this.background = 'blue';
 		this.barPadding = 15;
 		this.colorScheme = {
 			domain: [
