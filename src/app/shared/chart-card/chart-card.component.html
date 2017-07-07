@@ -1,9 +1,9 @@
 <div class="card" [ngSwitch]="chartElement.type">
-	<div class="card-header card-chart" data-background-color="chartElement.background">
+	<div class="card-header card-chart" [attr.data-background-color]="chartElement.background">
 		<div class="ct-chart" id="chartElement">
 			<ngx-charts-bar-horizontal *ngSwitchCase="'bar-horizontal'"
 				[view]="chartElement.view"
-				[scheme]="colorScheme"
+				[scheme]="chartElement.scheme"
 				[results]="chartElement.results"
 				[gradient]="chartElement.gradient"
 				[xAxis]="chartElement.showXAxis"
@@ -12,6 +12,27 @@
 				[xAxisLabel]="chartElement.xAxisLabel"
 				[yAxisLabel]="chartElement.yAxisLabel">
 			</ngx-charts-bar-horizontal>
+			<ngx-charts-bar-horizontal-2d *ngSwitchCase="'bar-horizontal-2d'"
+				[view]="chartElement.view"
+				[scheme]="chartElement.scheme"
+				[results]="chartElement.results"
+				[gradient]="chartElement.gradient"
+				[xAxis]="chartElement.showXAxis"
+				[yAxis]="chartElement.showYAxis"
+				[barPadding]="chartElement.barPadding"
+				[xAxisLabel]="chartElement.xAxisLabel"
+				[yAxisLabel]="chartElement.yAxisLabel">
+			</ngx-charts-bar-horizontal-2d>
+			<ngx-charts-bar-vertical-2d *ngSwitchCase="'bar-vertical-2d'"
+				[view]="chartElement.view"
+				[scheme]="chartElement.scheme"
+				[results]="chartElement.results"
+				[xAxis]="chartElement.showXAxis"
+				[yAxis]="chartElement.showYAxis"
+				[barPadding]="chartElement.barPadding"
+				[xAxisLabel]="chartElement.xAxisLabel"
+				[yAxisLabel]="chartElement.yAxisLabel">
+			</ngx-charts-bar-vertical-2d>
 		</div>
 	</div>
 	<div class="card-content">

@@ -1,14 +1,4 @@
-<md-card>
-	<h3>Discount Vs. Sales</h3>
-	<ngx-charts-bar-vertical-2d
-		[view]="view"
-		[scheme]="colorScheme"
-		[results]="multi"
-		[xAxis]="showXAxis"
-		[yAxis]="showYAxis"
-		[barPadding]="barPadding"
-		[xAxisLabel]="xAxisLabel"
-		[yAxisLabel]="yAxisLabel"
-		(select)="onSelect($event)">
-	</ngx-charts-bar-vertical-2d>
-</md-card>
+<app-chart-card
+	[title]="title"
+	[chartElement]="chartElement">
+</app-chart-card>
