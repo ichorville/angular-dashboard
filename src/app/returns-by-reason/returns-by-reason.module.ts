@@ -7,6 +7,8 @@ import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 
+import { ChartCardModule } from '../shared/chart-card/chart-card.module';
+
 import { ReturnsByReasonComponent } from './returns-by-reason.component';
 import { ReturnsByReasonService } from './returns-by-reason.service';
 
@@ -18,7 +20,8 @@ import { ReturnsByReasonService } from './returns-by-reason.service';
 		ReactiveFormsModule,
 		HttpModule,
 		MaterialModule,
-		NgxChartsModule
+		NgxChartsModule,
+		ChartCardModule
 	],
 	declarations: [
 		ReturnsByReasonComponent

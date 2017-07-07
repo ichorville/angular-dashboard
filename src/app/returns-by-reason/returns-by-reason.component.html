@@ -1,12 +1,4 @@
-<md-card>
-	<h3>Returns by Reason</h3>
-    <ngx-charts-pie-chart
-		[view]="view"
-		[scheme]="colorScheme"
-		[results]="single"
-		[explodeSlices]="explodeSlices"
-		[labels]="showLabels"
-		[doughnut]="doughnut"
-		(select)="onSelect($event)">
-    </ngx-charts-pie-chart>
-</md-card>
+<app-chart-card
+	[title]="title"
+	[chartElement]="chartElement">
+</app-chart-card>

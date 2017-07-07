@@ -7,6 +7,8 @@ import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 
+import { ChartCardModule } from '../shared/chart-card/chart-card.module';
+
 import { SalesSkuSpreadSummaryComponent } from './sales-sku-spread-summary.component';
 import { SalesSkuSpreadSummaryService } from './sales-sku-spread-summary.service';
 
@@ -18,7 +20,8 @@ import { SalesSkuSpreadSummaryService } from './sales-sku-spread-summary.service
 		ReactiveFormsModule,
 		HttpModule,
 		MaterialModule,
-		NgxChartsModule
+		NgxChartsModule,
+		ChartCardModule
 	],
 	declarations: [
 		SalesSkuSpreadSummaryComponent
