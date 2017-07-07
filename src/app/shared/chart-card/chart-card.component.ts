@@ -1,11 +1,11 @@
-import { Component, OnInit, Input, AfterViewInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
 	selector: 'app-chart-card',
 	templateUrl: './chart-card.component.html',
 	styleUrls: ['./chart-card.component.css']
 })
-export class ChartCardComponent implements OnInit, AfterViewInit {
+export class ChartCardComponent implements OnInit {
 
 	@Input()
 	title: string;
@@ -18,11 +18,7 @@ export class ChartCardComponent implements OnInit, AfterViewInit {
 	}
 
 	ngOnInit() {
-		//document.getElementById('chartElement').parentElement.setAttribute('data-background-color', this.chartElement['background']);
-	}
 
-	ngAfterViewInit() {
-		document.getElementById('chartElement').parentElement.setAttribute('data-background-color', this.chartElement['background']);
 	}
 
 	colorScheme = {
